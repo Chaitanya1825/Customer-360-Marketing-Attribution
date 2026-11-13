@@ -1,11 +1,19 @@
-# Customer 360 & Marketing Attribution Platform
+<p align="center">
+  <img src="assets/images/banner.svg" alt="Customer 360 &amp; Marketing Attribution Platform Banner" width="100%">
+</p>
 
-[![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
-[![dbt Core 1.13](https://img.shields.io/badge/dbt-Core%201.13-orange?logo=dbt&logoColor=white)](https://www.getdbt.com/)
-[![Google BigQuery](https://img.shields.io/badge/Google%20Cloud-BigQuery-4285F4?logo=google-cloud&logoColor=white)](https://cloud.google.com/bigquery)
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.42%2B-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
-[![Tableau Public](https://img.shields.io/badge/Tableau%20Public-2026.3-E97627?logo=tableau&logoColor=white)](https://public.tableau.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+<p align="center">
+  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.11%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.11+"></a>
+  <a href="https://cloud.google.com/bigquery"><img src="https://img.shields.io/badge/Google_BigQuery-Cloud_Data_Warehouse-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white" alt="Google BigQuery"></a>
+  <a href="https://www.getdbt.com/"><img src="https://img.shields.io/badge/dbt_Core-1.13_ELT-FF694B?style=for-the-badge&logo=dbt&logoColor=white" alt="dbt Core"></a>
+  <a href="https://streamlit.io/"><img src="https://img.shields.io/badge/Streamlit-SaaS_Dashboard-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit"></a>
+  <a href="https://public.tableau.com/"><img src="https://img.shields.io/badge/Tableau_Public-Executive_Suite-E97627?style=for-the-badge&logo=tableau&logoColor=white" alt="Tableau Public"></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-059669?style=for-the-badge" alt="License: MIT"></a>
+</p>
+
+---
+
+## 🌟 Executive Overview
 
 An enterprise-grade **Customer 360 & Multi-Touch Marketing Attribution Platform** engineered with the modern data stack: **Google BigQuery**, **dbt Core**, **Python**, **Streamlit**, and **Tableau Public**.
 
@@ -15,11 +23,17 @@ The platform resolves anonymous digital web touchpoints to authenticated CRM cus
 
 ## 📑 Table of Contents
 
+- [Platform Showcase & Screenshots](#-platform-showcase--screenshots)
+  - [1. Executive Overview](#1-executive-overview)
+  - [2. Customer 360 & RFM Intelligence](#2-customer-360--rfm-intelligence)
+  - [3. Multi-Touch Marketing Attribution](#3-multi-touch-marketing-attribution)
+  - [4. Paid Campaign Performance & Unit Economics](#4-paid-campaign-performance--unit-economics)
 - [Project Architecture](#-project-architecture)
 - [Core Analytical Capabilities](#-core-analytical-capabilities)
   - [1. Customer 360 & RFM Segmentation](#1-customer-360--rfm-segmentation)
   - [2. Multi-Touch Attribution Engine](#2-multi-touch-attribution-engine)
   - [3. Data Governance & Attribution Safeguards](#3-data-governance--attribution-safeguards)
+- [Strategic Findings & Budget Recommendations](#-strategic-findings--budget-recommendations)
 - [dbt Transformation Pipeline](#-dbt-transformation-pipeline)
   - [Pipeline Layers](#pipeline-layers)
   - [Data Quality & Automated Testing](#data-quality--automated-testing)
@@ -29,11 +43,65 @@ The platform resolves anonymous digital web touchpoints to authenticated CRM cus
 - [Verified Baseline Metrics](#-verified-baseline-metrics)
 - [Repository Structure](#-repository-structure)
 - [Quickstart & Reproduction Guide](#-quickstart--reproduction-guide)
-  - [Prerequisites](#prerequisites)
-  - [Installation & Setup](#installation--setup)
-  - [Data Ingestion & dbt Execution](#data-ingestion--dbt-execution)
-  - [Launching Dashboards](#launching-dashboards)
 - [License](#-license)
+
+---
+
+## 🖥️ Platform Showcase & Screenshots
+
+### 1. Executive Overview
+> Real-time macro KPIs, cumulative revenue timelines, customer segment breakdown, and dynamically computed business intelligence alerts.
+
+<p align="center">
+  <img src="assets/screenshots/01_executive_overview.png" alt="Executive Overview Dashboard" width="100%" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.5);">
+</p>
+
+* **KPI Scorecards:** Total Revenue (\$240,669.11), Total Customers (500), Total Orders (1,231), AOV (\$195.51), Ad Spend (\$16,718.24), and Resolved GA4 Sessions (1,231).
+* **Revenue Trajectory:** Daily order revenue plotted with interactive Plotly hover tooltips.
+* **Customer Segment Composition:** Donut visualization of high-value versus at-risk accounts.
+* **Actionable Insights:** Automated flags for channel momentum and customer retention opportunities.
+
+---
+
+### 2. Customer 360 & RFM Intelligence
+> Complete customer profile intelligence featuring interactive 2D/3D RFM scatter matrices and customer directory lookup.
+
+<p align="center">
+  <img src="assets/screenshots/02_customer_360.png" alt="Customer 360 &amp; RFM Intelligence" width="100%" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.5);">
+</p>
+
+* **RFM Spatial Analysis:** Visual mapping of Recency vs. Monetary Value sized by purchase Frequency.
+* **Lifecycle Segmentation:** Automated categorization into Champions, Loyal Customers, Potential Loyalists, New Customers, and At Risk.
+* **Searchable Customer Directory:** Instant filtering by customer name, email, city, and lifetime order volume.
+* **Drill-Down Profile Card:** Detailed view showing individual customer signup date, total spend, AOV, and recorded touchpoints.
+
+---
+
+### 3. Multi-Touch Marketing Attribution
+> Attribution modeling engine comparing First-Touch, Last-Touch, Linear, and Time-Decay revenue credit.
+
+<p align="center">
+  <img src="assets/screenshots/03_marketing_attribution.png" alt="Multi-Touch Marketing Attribution" width="100%" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.5);">
+</p>
+
+* **Multi-Model Comparison:** Side-by-side revenue distribution across all 4 attribution models.
+* **Traffic Source & Medium Breakdown:** Granular revenue tracking across Organic Search, Referral, Direct, and Paid channels.
+* **Touchpoint Journey Depth:** Frequency distribution of customer touchpoint counts leading up to order conversions.
+* **Governance Compliance:** 381 unmatched orders (\$91,956.77) isolated as `Direct / (none) (Unattributed)` without data distortion.
+
+---
+
+### 4. Paid Campaign Performance & Unit Economics
+> Campaign efficiency analytics tracking blended Cost Per Click (CPC) and Cost Per Mille (CPM).
+
+<p align="center">
+  <img src="assets/screenshots/04_paid_campaign_performance.png" alt="Paid Campaign Performance" width="100%" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.5);">
+</p>
+
+* **Unit Cost Metrics:** Blended CPC of **\$0.81** and blended CPM of **\$20.94** across 798,417 impressions and 20,565 clicks.
+* **Channel Distribution:** Spend and engagement comparisons across Google Search, Meta Ads, YouTube Video, and TikTok.
+* **Campaign-Level Inspection:** Granular table showing daily spend, click-through volume, and efficiency across all 16 campaigns.
+* **Strict Hierarchy Separation:** Paid advertising costs kept separate from web attribution to eliminate fictitious ROAS/CPA calculations.
 
 ---
 
@@ -85,12 +153,12 @@ Aggregates individual customer journeys into a single customer profile:
   * **Frequency ($F$):** Total lifetime successful order count.
   * **Monetary Value ($M$):** Cumulative order spend.
 * **Behavioral Segmentation Rules:**
-  * **Champions:** High monetary value ($M \ge \$500$), frequent purchases ($F \ge 3$), recent activity ($R \le 10\text{ days}$).
-  * **Loyal Customers:** Frequent buyers ($F \ge 3$) with consistent engagement.
-  * **Potential Loyalists:** Medium frequency ($F \in [2, 3)$) with recent activity ($R \le 14\text{ days}$).
-  * **New Customers:** Single-order customers ($F = 1$) who made a purchase within the last 7 days ($R \le 7\text{ days}$).
-  * **At Risk:** High/medium previous spenders who have lapsed ($R > 14\text{ days}$).
-  * **Others:** Low-frequency or zero-order accounts.
+  * **Champions:** High monetary value ($M \ge \$600$), frequent purchases ($F \ge 3$), recent activity ($R \le 7\text{ days}$).
+  * **Loyal Customers:** Consistent buyers ($F \ge 2$) with lifetime spend $M \ge \$400$.
+  * **Potential Loyalists:** Recent buyers ($R \le 7\text{ days}$) with moderate spend ($M \ge \$150$).
+  * **New Customers:** Single-order buyers ($F = 1$) who purchased within the last 5 days ($R \le 5\text{ days}$).
+  * **At Risk:** Lapsed customers ($R \ge 12\text{ days}$) with positive previous spend.
+  * **Others:** Inactive accounts or prospects.
 
 ### 2. Multi-Touch Attribution Engine
 
@@ -98,15 +166,19 @@ Evaluates every order against all customer touchpoints occurring **on or before 
 
 $$\text{Order Amount} = \sum_{i=1}^{N} (\text{Credit}_i \times \text{Order Amount})$$
 
-1. **First-Touch Attribution:**
-   Assigns 100% of revenue credit to the chronological first interaction channel ($i = 1$). Identifies top-of-funnel customer acquisition drivers.
-2. **Last-Touch Attribution:**
-   Assigns 100% of revenue credit to the final touchpoint prior to checkout ($i = N$). Identifies bottom-of-funnel conversion closers.
-3. **Linear Attribution:**
-   Distributes credit equally across all touchpoints:
+1. **First-Touch Attribution (Top of Funnel):**
+   $$\text{Credit}_i = \begin{cases} 1.0 & \text{if } i = 1 \\ 0.0 & \text{otherwise} \end{cases}$$
+   Allocates 100% of revenue to the initial discovery channel that introduced the customer to the brand.
+
+2. **Last-Touch Attribution (Bottom of Funnel):**
+   $$\text{Credit}_i = \begin{cases} 1.0 & \text{if } i = N \\ 0.0 & \text{otherwise} \end{cases}$$
+   Allocates 100% of revenue to the final touchpoint preceding conversion.
+
+3. **Linear Attribution (Equal Weight):**
    $$\text{Credit}_i = \frac{1}{N}$$
-4. **Time-Decay Attribution (7-Day Half-Life):**
-   Applies exponential decay weighting based on the time delta ($\Delta t_i$ in days) between the touchpoint timestamp and the order date:
+   Distributes credit equally across all valid customer touchpoints.
+
+4. **Time-Decay Attribution (7-Day Exponential Half-Life):**
    $$W_i = 2^{-\frac{\Delta t_i}{7}}, \quad \text{Credit}_i = \frac{W_i}{\sum_{j=1}^{N} W_j}$$
    Touchpoints closer to the moment of conversion receive proportionally higher credit, while still acknowledging earlier awareness touchpoints.
 
@@ -118,93 +190,97 @@ $$\text{Order Amount} = \sum_{i=1}^{N} (\text{Credit}_i \times \text{Order Amoun
 
 ---
 
+## 💡 Strategic Findings & Budget Recommendations
+
+Based on our multi-touch attribution and unit economics analysis, marketing budgets should be optimized across three key pillars:
+
+| Strategic Focus | Channel / Cohort | Observed Data Metric | Recommended Budget Action |
+| :--- | :--- | :--- | :--- |
+| **High-Intent Conversion** | **Google Search & Meta Retargeting** | Lowest blended CPC (\$0.65–\$0.80) & high Last-Touch credit | **Increase budget by 15–20%** to capture active high-intent purchase demand. |
+| **Top-of-Funnel Reach** | **TikTok & YouTube Video** | Low CPM (\$15–\$22) but higher CPC (\$1.10–\$1.35) | **Maintain top-of-funnel reach with strict frequency caps**; avoid overspending on broad audience targeting. |
+| **Customer Retention** | **"At Risk" Cohort (150+ customers)** | LTV shows Champions & Loyalists generate >60% of revenue | **Shift 10% of cold ad spend into automated email/CRM re-engagement** for lapsed customers to maximize net margins. |
+
+---
+
 ## ⚡ dbt Transformation Pipeline
 
 The data transformation layer is built using **dbt Core** targeting **Google BigQuery**:
 
-```
+```text
 dbt_project/
 ├── dbt_project.yml          # Project configuration & model paths
 ├── profiles.yml             # BigQuery OAuth connection with env_var support
+├── profiles.yml.example     # Template for third-party contributors
 ├── macros/
 │   └── unique_combination_of_columns.sql   # Composite key uniqueness test
 ├── models/
-│   ├── staging/             # Clean, type-cast, and standardized source tables
-│   │   ├── stg_customers.sql
-│   │   ├── stg_orders.sql
-│   │   ├── stg_ga4_sessions.sql
-│   │   ├── stg_identity_mapping.sql
-│   │   └── stg_ad_spend.sql
-│   ├── intermediate/        # Business logic & identity resolution
-│   │   └── int_customer_sessions.sql
-│   └── marts/               # Analytical dimension & fact models
-│       ├── customer_360.sql
-│       ├── fct_order_attribution.sql
-│       └── fct_campaign_performance.sql
-└── tests/                   # Singular custom assertions
+│   ├── staging/
+│   │   ├── _sources.yml                    # BigQuery raw table definitions
+│   │   ├── _staging_models.yml             # Staging tests & column descriptions
+│   │   ├── stg_customers.sql               # CRM customer cleaning & typing
+│   │   ├── stg_orders.sql                  # Order transactions & date casting
+│   │   ├── stg_ga4_sessions.sql            # GA4 web session log parsing
+│   │   ├── stg_identity_mapping.sql        # Cookie-to-customer bridge
+│   │   └── stg_ad_spend.sql                # Advertising campaign expenditures
+│   ├── intermediate/
+│   │   ├── _intermediate_models.yml
+│   │   └── int_customer_sessions.sql       # Session stitching & touchpoint ranking
+│   └── marts/
+│       ├── _customer_360.yml
+│       ├── _attribution.yml
+│       ├── _campaign_performance.yml
+│       ├── customer_360.sql                # Customer profile mart with RFM segmentation
+│       ├── fct_order_attribution.sql       # 4-model multi-touch attribution mart
+│       └── fct_campaign_performance.sql    # Campaign spend & unit economics mart
+└── tests/
     ├── assert_campaign_performance_totals.sql
     └── assert_order_attribution_credits_sum_to_one.sql
 ```
 
-### Pipeline Layers
-
-1. **Staging Layer (`staging`):** Standardizes field names, casts timestamps and numeric values, and ensures primary key integrity across raw sources.
-2. **Intermediate Layer (`intermediate`):** Executes deterministic identity resolution between anonymous web users (`user_pseudo_id`) and authenticated CRM records (`customer_id`), and generates chronological session sequence ranks via `ROW_NUMBER() OVER (...)`.
-3. **Marts Layer (`marts`):**
-   * **`customer_360`**: Unified profile table with RFM scores and customer segment labels.
-   * **`fct_order_attribution`**: Order-touchpoint grain fact table calculating all four attribution credits per touchpoint.
-   * **`fct_campaign_performance`**: Partitioned reporting mart separating paid advertising spend economics from web acquisition channel revenue.
-
 ### Data Quality & Automated Testing
 
-The project includes **40 automated dbt tests**:
-* **38 Schema Tests:** Enforces `not_null`, `unique`, `relationships` (referential integrity), `accepted_values` (segment and section checks), and `unique_combination_of_columns` (composite key uniqueness on `[order_id, touchpoint_rank]` and `[customer_id, ga_session_id]`).
-* **2 Singular Custom Assertions:**
-  * `assert_order_attribution_credits_sum_to_one.sql`: Validates that attribution credits for every order strictly sum to $1.0 \pm 0.001$.
-  * `assert_campaign_performance_totals.sql`: Confirms total spend matches the raw advertising ledger.
+The project incorporates **40 automated dbt tests**:
+* **Schema Tests:** `not_null`, `unique`, `accepted_values`, `relationships` (referential integrity).
+* **Singular SQL Assertion Tests:**
+  * `assert_order_attribution_credits_sum_to_one.sql`: Ensures that for every matched order, attribution credits across touchpoints sum to exactly 1.0 (with a 0.0001 tolerance).
+  * `assert_campaign_performance_totals.sql`: Validates that aggregated campaign spend, clicks, and impressions match raw ingested totals.
 
 ---
 
-## 🖥️ Dual Delivery Interfaces
+## 🚀 Dual Delivery Interfaces
 
 ### 1. Streamlit SaaS Analytics Application
-
-A custom enterprise SaaS dark-themed analytics web application (`app/app.py`):
-* **Visual Styling:** Deep Navy (`#0B1020`) and Card Slate (`#151D30`), with electric blue (`#38BDF8`), violet, and emerald accents.
-* **Executive Overview:** Real-time KPI scorecards with trend indicators, cumulative revenue metrics, and channel breakdowns.
-* **Customer 360 Explorer:** Interactive RFM scatter plots, segment distribution bar charts, and a searchable customer lookup with drill-down purchase history.
-* **Marketing Attribution Sandbox:** Direct visual comparison across First-Touch, Last-Touch, Linear, and Time-Decay attribution models.
-* **Paid Campaign Economics:** Channel-by-channel unit economics (CPC, CPM, spend, clicks, impressions).
+* **Visual Theme:** Custom dark theme featuring Deep Navy (`#0B1020`) and Card Slate (`#151D30`) with electric blue (`#38BDF8`), violet, and emerald accents.
+* **Interactive Navigation:** Sidebar navigation across Executive Overview, Customer 360, Marketing Attribution, and Paid Campaign Performance.
+* **Dynamic Querying:** Direct connection to BigQuery with automatic caching and zero hardcoded metrics.
 
 ```bash
 streamlit run app/app.py
 ```
 
 ### 2. Tableau Public Executive Suite
-
-A native Tableau Public workbook suite available in both packaged (`.twbx`) and extract-connected (`.twb`) formats:
-* **File:** [`exports/tableau/Customer360_Analytics.twbx`](file:///C:/Users/HP/Desktop/Customer%20360%20and%20Marketing%20Attribution%20Platform/exports/tableau/Customer360_Analytics.twbx)
-* **Dashboards:**
-  1. **Executive Overview:** High-level executive KPI metrics, segment composition, and revenue contribution.
+* **Deliverable Files:** [`exports/tableau/Customer360_Analytics.twbx`](file:///C:/Users/HP/Desktop/Customer%20360%20and%20Marketing%20Attribution%20Platform/exports/tableau/Customer360_Analytics.twbx) (packaged workbook) and [`Customer360_Analytics.twb`](file:///C:/Users/HP/Desktop/Customer%20360%20and%20Marketing%20Attribution%20Platform/exports/tableau/Customer360_Analytics.twb).
+* **Pre-Compiled Hyper Extracts:** Powered by native `.hyper` extract databases (`customer_360.hyper`, `fct_order_attribution.hyper`, `fct_campaign_performance.hyper`) for instant offline loading and zero cloud publishing warnings.
+* **3 Cohesive Dashboards:**
+  1. **Executive Overview:** High-level KPI metrics, segment composition, and revenue contribution.
   2. **Customer Intelligence:** RFM scatter matrix, order frequency distribution, and customer value tiers.
   3. **Marketing Attribution:** Multi-model revenue comparison, touchpoint depth distribution, paid campaign spend, and CPC vs. CPM channel efficiency.
-* **Embedded Hyper Engine:** Pre-compiled `.hyper` extract databases (`customer_360.hyper`, `fct_order_attribution.hyper`, `fct_campaign_performance.hyper`) embedded directly inside the workbook for instant offline loading and zero cloud publishing warnings.
 
 ---
 
 ## 📊 Verified Baseline Metrics
 
-Every analytical metric in the platform is verified against the underlying BigQuery ground truth:
+Every analytical metric in the platform is dynamically calculated and verified against the underlying BigQuery ground truth:
 
 | Analytical Metric | Ground Truth Value | Validation Notes |
 | :--- | :--- | :--- |
 | **Total Order Revenue** | **\$240,669.11** | Zero revenue duplication across multi-touch joins |
-| **Total Paid Ad Spend** | **\$16,718.24** | 6 campaigns across Google, Meta, and YouTube |
+| **Total Paid Ad Spend** | **\$16,718.24** | 16 campaign records across Google, Meta, TikTok, and YouTube |
 | **Total Customers** | **500** | Includes active buyers and zero-order signups |
-| **Total Orders** | **1,000** | Across 22-day simulation timeframe |
-| **Average Order Value (AOV)** | **\$240.67** | Verified across CRM and mart layers |
+| **Total Orders** | **1,231** | Complete 22-day simulation timeframe |
+| **Average Order Value (AOV)** | **\$195.51** | Dynamically calculated across all 1,231 orders |
 | **Unattributed Orders** | **381 Orders (\$91,956.77)** | Safely categorized as Direct / (none) |
-| **Ad Clicks / Impressions** | **20,565 / 798,417** | Average CPC: \$0.81 \| Average CPM: \$20.94 |
+| **Ad Clicks / Impressions** | **20,565 / 798,417** | Blended CPC: \$0.81 \| Blended CPM: \$20.94 |
 
 ---
 
@@ -216,6 +292,15 @@ Customer 360 and Marketing Attribution Platform/
 ├── requirements.txt                   # Verified Python dependencies
 ├── README.md                          # Production platform documentation
 │
+├── assets/                            # Visual assets & screenshots
+│   ├── images/
+│   │   └── banner.svg                 # Platform vector branding banner
+│   └── screenshots/
+│       ├── 01_executive_overview.png
+│       ├── 02_customer_360.png
+│       ├── 03_marketing_attribution.png
+│       └── 04_paid_campaign_performance.png
+│
 ├── app/
 │   └── app.py                         # Interactive Streamlit SaaS dashboard
 ├── .streamlit/
@@ -224,7 +309,7 @@ Customer 360 and Marketing Attribution Platform/
 ├── data/
 │   └── raw/                           # Raw source CSV datasets
 │       ├── customers.csv              # CRM customer demographic records (500 rows)
-│       ├── orders.csv                 # Purchase transactions (1,000 rows)
+│       ├── orders.csv                 # Purchase transactions (1,231 rows)
 │       ├── ga4_sessions.csv           # Google Analytics 4 session logs (7.8 MB)
 │       ├── identity_mapping.csv       # Deterministic identity resolution bridge
 │       └── ad_spend.csv               # Daily campaign advertising expenditure
@@ -260,7 +345,8 @@ Customer 360 and Marketing Attribution Platform/
 │   ├── build_verified_twb.py          # Tableau XML compiler
 │   ├── build_hyper_extracts.py        # Native Hyper database compiler
 │   ├── package_tableau_workbook.py    # .twbx packager
-│   └── verify_final_twb.py            # Automated Tableau test harness
+│   ├── verify_final_twb.py            # Automated Tableau test harness
+│   └── capture_all_screenshots.py     # Automated headless dashboard screenshot capturer
 │
 └── sql/                               # Standalone reference SQL queries
     ├── customer_360.sql
@@ -276,78 +362,42 @@ Customer 360 and Marketing Attribution Platform/
 ### Prerequisites
 
 * **Python 3.11+** installed.
-* **Google Cloud SDK (`gcloud`)** installed and configured.
-* **Tableau Public** (2024.1+ or 2026.3) installed (optional, for viewing Tableau dashboards locally).
+* **Google Cloud SDK (`gcloud`)** installed and authenticated via Application Default Credentials (ADC).
+* **Tableau Public** (optional, for viewing `.twbx` locally).
 
-### Installation & Setup
+### Step 1: Clone & Install
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/your-username/customer-360-marketing-attribution.git
-   cd customer-360-marketing-attribution
-   ```
+```bash
+git clone https://github.com/Chaitanya1825/Customer-360-Marketing-Attribution.git
+cd Customer-360-Marketing-Attribution
 
-2. **Create and activate a virtual environment:**
-   ```bash
-   # Windows (PowerShell)
-   python -m venv venv
-   .\venv\Scripts\Activate.ps1
+python -m venv venv
+# Windows (PowerShell)
+.\venv\Scripts\Activate.ps1
+# macOS/Linux
+source venv/bin/activate
 
-   # macOS / Linux
-   python3 -m venv venv
-   source venv/bin/activate
-   ```
+pip install -r requirements.txt
+```
 
-3. **Install dependencies:**
-   ```bash
-   pip install --upgrade pip
-   pip install -r requirements.txt
-   ```
+### Step 2: Authenticate with Google Cloud
 
-4. **Authenticate with Google Cloud:**
-   ```bash
-   gcloud auth application-default login
-   ```
+```bash
+gcloud auth application-default login
+```
 
-5. **(Optional) Configure environment variables:**
-   If using a custom Google Cloud Project:
-   ```bash
-   # Windows (PowerShell)
-   $env:GCP_PROJECT_ID = "your-gcp-project-id"
+### Step 3: Run dbt Pipeline
 
-   # macOS / Linux
-   export GCP_PROJECT_ID="your-gcp-project-id"
-   ```
+```bash
+dbt build --project-dir dbt_project --profiles-dir dbt_project
+```
 
-### Data Ingestion & dbt Execution
+### Step 4: Launch Streamlit Platform
 
-1. **Upload raw datasets to BigQuery:**
-   ```bash
-   python scripts/upload_to_bigquery.py
-   ```
-
-2. **Run dbt transformations and data quality tests:**
-   ```bash
-   dbt build --project-dir dbt_project --profiles-dir dbt_project
-   ```
-
-3. **Export BigQuery marts for Tableau:**
-   ```bash
-   python scripts/export_tableau_data.py
-   python scripts/build_hyper_extracts.py
-   python scripts/package_tableau_workbook.py
-   ```
-
-### Launching Dashboards
-
-* **Launch the Streamlit SaaS Dashboard:**
-  ```bash
-  streamlit run app/app.py
-  ```
-  Open your browser at `http://localhost:8501`.
-
-* **Open the Tableau Executive Suite:**
-  Double-click `exports/tableau/Customer360_Analytics.twbx` or open directly via Tableau Public.
+```bash
+streamlit run app/app.py
+```
+Access the application at `http://localhost:8501`.
 
 ---
 
