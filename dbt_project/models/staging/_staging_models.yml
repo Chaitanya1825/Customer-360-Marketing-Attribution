@@ -1,0 +1,73 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: "Cleaned and standardized customer profiles from CRM."
+    columns:
+      - name: customer_id
+        description: "Primary key for customer."
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_orders
+    description: "Cleaned purchase orders."
+    columns:
+      - name: order_id
+        description: "Primary key for order."
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: "Foreign key referencing stg_customers."
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_customers')
+                field: customer_id
+
+  - name: stg_ad_spend
+    description: "Cleaned daily ad spend per channel."
+    columns:
+      - name: campaign_id
+        tests:
+          - not_null
+      - name: spend_date
+        tests:
+          - not_null
+
+  - name: stg_ga4_sessions
+    description: "Cleaned web sessions from GA4."
+    # Composite uniqueness test for user_pseudo_id + ga_session_id
+    tests:
+      - unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - user_pseudo_id
+              - ga_session_id
+    columns:
+      - name: user_pseudo_id
+        description: "Anonymous visitor ID (not assumed to be globally unique alone)."
+        tests:
+          - not_null
+      - name: ga_session_id
+        description: "Session timestamp ID (not assumed to be globally unique alone)."
+        tests:
+          - not_null
+
+  - name: stg_identity_mapping
+    description: "Identity resolution bridge table."
+    columns:
+      - name: user_pseudo_id
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_customers')
+                field: customer_id

@@ -1,0 +1,501 @@
+customer_id,name,email,city,signup_date,total_orders,total_revenue,average_order_value,first_order_date,last_order_date,total_sessions,first_session_date,last_session_date,recency_days,frequency,monetary_value,customer_segment
+CUST432,Bryan Holmes,hannah03@example.com,West Michaelview,2021-01-14,0,0E-9,0E-9,,,1,2021-01-22,2021-01-22,,0,0E-9,Others
+CUST196,Justin Brown,ashleyhernandez@example.com,Wilsonborough,2021-01-27,0,0E-9,0E-9,,,1,2021-01-11,2021-01-11,,0,0E-9,Others
+CUST460,John Stewart,linda73@example.org,Howardberg,2021-01-13,0,0E-9,0E-9,,,1,2021-01-12,2021-01-12,,0,0E-9,Others
+CUST407,Brandy Hunt,brianscott@example.org,Greeneshire,2021-01-30,0,0E-9,0E-9,,,5,2021-01-26,2021-01-27,,0,0E-9,Others
+CUST139,Taylor Hernandez,odavis@example.com,Sarahchester,2021-01-22,0,0E-9,0E-9,,,1,2021-01-29,2021-01-29,,0,0E-9,Others
+CUST333,Mr. Donald Nguyen,jose43@example.org,North Linda,2021-01-28,0,0E-9,0E-9,,,1,2021-01-28,2021-01-28,,0,0E-9,Others
+CUST183,Kenneth Daniels,xcardenas@example.org,Bobbyland,2021-01-17,0,0E-9,0E-9,,,0,,,,0,0E-9,Others
+CUST366,Samuel Lewis,jenniferrodriguez@example.com,Lake Maryshire,2021-01-26,0,0E-9,0E-9,,,1,2021-01-16,2021-01-16,,0,0E-9,Others
+CUST428,Travis Vega,victorgonzalez@example.net,Port Joseph,2021-01-28,0,0E-9,0E-9,,,1,2021-01-14,2021-01-14,,0,0E-9,Others
+CUST064,David Martinez,leslienewton@example.net,East Javier,2021-01-19,0,0E-9,0E-9,,,2,2021-01-22,2021-01-23,,0,0E-9,Others
+CUST377,Nicole Payne,kimberlybrandt@example.com,Thompsonland,2021-01-19,0,0E-9,0E-9,,,1,2021-01-17,2021-01-17,,0,0E-9,Others
+CUST312,Tammy Fernandez,kenneth10@example.com,Hernandezstad,2021-01-20,0,0E-9,0E-9,,,1,2021-01-19,2021-01-19,,0,0E-9,Others
+CUST016,Marie Kim DDS,wrightcaleb@example.org,New Jeffrey,2021-01-12,0,0E-9,0E-9,,,1,2021-01-20,2021-01-20,,0,0E-9,Others
+CUST247,Robin Mccarthy,samantha91@example.net,West David,2021-01-16,0,0E-9,0E-9,,,0,,,,0,0E-9,Others
+CUST409,Jason Thomas,cindydixon@example.org,Sandrashire,2021-01-18,0,0E-9,0E-9,,,0,,,,0,0E-9,Others
+CUST145,Kimberly Hartman,myerstheodore@example.net,Zavalaview,2021-01-10,0,0E-9,0E-9,,,1,2021-01-13,2021-01-13,,0,0E-9,Others
+CUST167,Tyler Webb,eevans@example.net,East Scottfort,2021-01-26,0,0E-9,0E-9,,,1,2021-01-13,2021-01-13,,0,0E-9,Others
+CUST350,Mr. Richard Decker DVM,jade42@example.org,Lozanofort,2021-01-22,0,0E-9,0E-9,,,1,2021-01-16,2021-01-16,,0,0E-9,Others
+CUST090,Jeffrey Sanchez,yknight@example.org,East Christian,2021-01-18,0,0E-9,0E-9,,,0,,,,0,0E-9,Others
+CUST394,Corey Tucker,christina49@example.org,Lindseychester,2021-01-19,0,0E-9,0E-9,,,1,2021-01-21,2021-01-21,,0,0E-9,Others
+CUST123,Tamara Davis,sanchezbrianna@example.net,South Monicamouth,2021-01-21,0,0E-9,0E-9,,,1,2021-01-17,2021-01-17,,0,0E-9,Others
+CUST202,Nathan Coleman,pmorrow@example.com,Ericborough,2021-01-16,0,0E-9,0E-9,,,1,2021-01-15,2021-01-15,,0,0E-9,Others
+CUST091,Lisa Allen,jesselittle@example.com,Elizabethmouth,2021-01-30,0,0E-9,0E-9,,,1,2021-01-27,2021-01-27,,0,0E-9,Others
+CUST249,Melissa Brewer,angelaburns@example.org,West Megan,2021-01-13,0,0E-9,0E-9,,,1,2021-01-28,2021-01-28,,0,0E-9,Others
+CUST349,Debra Obrien,robertroach@example.net,West Danielville,2021-01-18,0,0E-9,0E-9,,,1,2021-01-19,2021-01-19,,0,0E-9,Others
+CUST374,Melissa Phillips,howardshaun@example.net,Lake Deborah,2021-01-15,0,0E-9,0E-9,,,1,2021-01-16,2021-01-16,,0,0E-9,Others
+CUST181,Emily Thompson,amy49@example.com,East Joshua,2021-01-21,0,0E-9,0E-9,,,0,,,,0,0E-9,Others
+CUST252,Carol Ellis,hdunn@example.net,West Kimberlystad,2021-01-21,0,0E-9,0E-9,,,0,,,,0,0E-9,Others
+CUST421,Crystal Jackson,warddiana@example.org,West Kimberlystad,2021-01-10,0,0E-9,0E-9,,,1,2021-01-10,2021-01-10,,0,0E-9,Others
+CUST323,Amanda Preston,hannah07@example.com,Andrewport,2021-01-15,0,0E-9,0E-9,,,3,2021-01-25,2021-01-25,,0,0E-9,Others
+CUST040,Cheryl Ortega,lbyrd@example.net,Richardtown,2021-01-12,0,0E-9,0E-9,,,1,2021-01-12,2021-01-12,,0,0E-9,Others
+CUST111,Michael Farrell,russellbeasley@example.com,Mariafurt,2021-01-24,0,0E-9,0E-9,,,1,2021-01-21,2021-01-21,,0,0E-9,Others
+CUST303,Sylvia Schroeder,susan56@example.net,West Kevinberg,2021-01-25,0,0E-9,0E-9,,,1,2021-01-28,2021-01-28,,0,0E-9,Others
+CUST308,Amber Kim,acosta@example.com,Bellfurt,2021-01-11,0,0E-9,0E-9,,,1,2021-01-31,2021-01-31,,0,0E-9,Others
+CUST277,Rachel Le,nathanbrady@example.com,Port Rachelmouth,2021-01-24,0,0E-9,0E-9,,,1,2021-01-17,2021-01-17,,0,0E-9,Others
+CUST268,Daniel Goodman,cjensen@example.org,North Donaldville,2021-01-27,0,0E-9,0E-9,,,1,2021-01-11,2021-01-11,,0,0E-9,Others
+CUST481,Katherine Pearson,annshea@example.net,East Charles,2021-01-26,0,0E-9,0E-9,,,1,2021-01-16,2021-01-16,,0,0E-9,Others
+CUST320,Justin Arnold,april09@example.net,Rodriguezberg,2021-01-11,0,0E-9,0E-9,,,1,2021-01-18,2021-01-18,,0,0E-9,Others
+CUST054,Marissa Webster,jamessmith@example.org,East Thomas,2021-01-19,0,0E-9,0E-9,,,0,,,,0,0E-9,Others
+CUST453,Brandon Smith,matthewcollins@example.com,Steventon,2021-01-15,0,0E-9,0E-9,,,1,2021-01-16,2021-01-16,,0,0E-9,Others
+CUST291,Jared Chavez,codygarcia@example.org,North Bryanbury,2021-01-22,0,0E-9,0E-9,,,1,2021-01-19,2021-01-19,,0,0E-9,Others
+CUST408,Sherry Luna,stacey37@example.net,Dillonburgh,2021-01-23,0,0E-9,0E-9,,,0,,,,0,0E-9,Others
+CUST219,Brent Hernandez,christineking@example.com,Lauraland,2021-01-28,0,0E-9,0E-9,,,1,2021-01-20,2021-01-20,,0,0E-9,Others
+CUST385,Christine Poole,elucas@example.net,North Stephen,2021-01-31,0,0E-9,0E-9,,,2,2021-01-12,2021-01-18,,0,0E-9,Others
+CUST075,Alicia Hubbard,barbara27@example.net,Moonburgh,2021-01-21,0,0E-9,0E-9,,,0,,,,0,0E-9,Others
+CUST389,Joseph Taylor,irobles@example.com,West Erica,2021-01-13,0,0E-9,0E-9,,,1,2021-01-13,2021-01-13,,0,0E-9,Others
+CUST491,Tiffany Perez,penny21@example.net,Meyerbury,2021-01-18,0,0E-9,0E-9,,,1,2021-01-25,2021-01-25,,0,0E-9,Others
+CUST475,Crystal Shepherd,duncanashley@example.org,Lake Markfort,2021-01-20,0,0E-9,0E-9,,,1,2021-01-17,2021-01-17,,0,0E-9,Others
+CUST364,Ashley Malone,aaronkelly@example.net,Amystad,2021-01-27,0,0E-9,0E-9,,,1,2021-01-20,2021-01-20,,0,0E-9,Others
+CUST344,Carl Reyes,gary04@example.com,Lunahaven,2021-01-18,0,0E-9,0E-9,,,1,2021-01-24,2021-01-24,,0,0E-9,Others
+CUST041,Daniel Floyd,steven73@example.net,Leonburgh,2021-01-22,0,0E-9,0E-9,,,1,2021-01-24,2021-01-24,,0,0E-9,Others
+CUST083,Aaron Barber,cgrimes@example.net,Reedside,2021-01-30,0,0E-9,0E-9,,,3,2021-01-21,2021-01-21,,0,0E-9,Others
+CUST013,Brittany Farmer,georgetracy@example.org,Natashaport,2021-01-23,0,0E-9,0E-9,,,1,2021-01-30,2021-01-30,,0,0E-9,Others
+CUST473,Kelly Holder,adam33@example.com,Port Lynnview,2021-01-16,0,0E-9,0E-9,,,1,2021-01-17,2021-01-17,,0,0E-9,Others
+CUST343,Stephanie Sherman,andrewsmith@example.net,East Heather,2021-01-20,0,0E-9,0E-9,,,1,2021-01-26,2021-01-26,,0,0E-9,Others
+CUST050,Aaron Bell,acastaneda@example.net,South Jeffrey,2021-01-13,0,0E-9,0E-9,,,1,2021-01-11,2021-01-11,,0,0E-9,Others
+CUST001,Allison Hill,donaldgarcia@example.net,New Roberttown,2021-01-30,0,0E-9,0E-9,,,1,2021-01-26,2021-01-26,,0,0E-9,Others
+CUST051,Allen Rogers,dramsey@example.org,South Brittanytown,2021-01-22,0,0E-9,0E-9,,,0,,,,0,0E-9,Others
+CUST414,Rachel Lane,meyernicholas@example.org,Robertville,2021-01-30,1,437.260000000,437.260000000,2021-01-31,2021-01-31,1,2021-01-16,2021-01-16,0,1,437.260000000,Potential Loyalists
+CUST382,Gregory Allen,susanfleming@example.com,Moonville,2021-01-31,1,197.910000000,197.910000000,2021-01-31,2021-01-31,1,2021-01-26,2021-01-26,0,1,197.910000000,Potential Loyalists
+CUST043,John Atkinson,gibsonolivia@example.net,Lake Heather,2021-01-21,1,248.410000000,248.410000000,2021-01-31,2021-01-31,3,2021-01-28,2021-01-29,0,1,248.410000000,Potential Loyalists
+CUST209,Matthew Nielsen,christopher30@example.com,Nunezton,2021-01-21,1,421.740000000,421.740000000,2021-01-31,2021-01-31,1,2021-01-15,2021-01-15,0,1,421.740000000,Potential Loyalists
+CUST353,Brian York,smithdevon@example.net,West Michael,2021-01-30,1,319.380000000,319.380000000,2021-01-31,2021-01-31,1,2021-01-16,2021-01-16,0,1,319.380000000,Potential Loyalists
+CUST463,Mark Gray,nicoleharvey@example.com,West Jennifer,2021-01-25,1,99.400000000,99.400000000,2021-01-31,2021-01-31,0,,,0,1,99.400000000,New Customers
+CUST062,Jason Peters,hannahbrewer@example.com,Mcguireland,2021-01-31,1,322.940000000,322.940000000,2021-01-31,2021-01-31,1,2021-01-23,2021-01-23,0,1,322.940000000,Potential Loyalists
+CUST144,Doris Smith,john62@example.net,New Theresaland,2021-01-27,1,310.970000000,310.970000000,2021-01-31,2021-01-31,4,2021-01-19,2021-01-29,0,1,310.970000000,Potential Loyalists
+CUST241,Jason Nixon,guerrajessica@example.com,Matthewborough,2021-01-28,1,413.490000000,413.490000000,2021-01-31,2021-01-31,1,2021-01-11,2021-01-11,0,1,413.490000000,Potential Loyalists
+CUST194,Daniel Bernard,vhernandez@example.net,Robertside,2021-01-31,1,420.790000000,420.790000000,2021-01-31,2021-01-31,1,2021-01-26,2021-01-26,0,1,420.790000000,Potential Loyalists
+CUST200,Veronica Brewer,ybrooks@example.com,Bennettside,2021-01-29,1,426.540000000,426.540000000,2021-01-31,2021-01-31,0,,,0,1,426.540000000,Potential Loyalists
+CUST456,Vickie Kennedy,sharon20@example.net,West Timothyport,2021-01-31,1,294.230000000,294.230000000,2021-01-31,2021-01-31,1,2021-01-12,2021-01-12,0,1,294.230000000,Potential Loyalists
+CUST375,Jorge Robles,heather06@example.com,Fryemouth,2021-01-24,1,291.160000000,291.160000000,2021-01-31,2021-01-31,0,,,0,1,291.160000000,Potential Loyalists
+CUST119,Daniel Hunt,russell49@example.com,Brandonfurt,2021-01-28,1,288.950000000,288.950000000,2021-01-31,2021-01-31,1,2021-01-21,2021-01-21,0,1,288.950000000,Potential Loyalists
+CUST346,Nicholas Anderson,lawrencegary@example.com,South Nancyview,2021-01-31,1,91.340000000,91.340000000,2021-01-31,2021-01-31,0,,,0,1,91.340000000,New Customers
+CUST480,Patrick Kelley,christopher86@example.net,Port Dennis,2021-01-30,1,76.180000000,76.180000000,2021-01-31,2021-01-31,0,,,0,1,76.180000000,New Customers
+CUST094,Ronald Foster,knightgina@example.net,New Julieport,2021-01-31,1,316.640000000,316.640000000,2021-01-31,2021-01-31,0,,,0,1,316.640000000,Potential Loyalists
+CUST092,Megan Moore,llandry@example.com,Vaughnmouth,2021-01-27,1,185.980000000,185.980000000,2021-01-31,2021-01-31,1,2021-01-17,2021-01-17,0,1,185.980000000,Potential Loyalists
+CUST077,Donna Landry,gibsonleonard@example.com,Port Richardhaven,2021-01-31,1,354.090000000,354.090000000,2021-01-31,2021-01-31,1,2021-01-25,2021-01-25,0,1,354.090000000,Potential Loyalists
+CUST341,Anthony Hayes,kathleenjackson@example.org,Gloverland,2021-01-28,1,177.820000000,177.820000000,2021-01-30,2021-01-30,0,,,1,1,177.820000000,Potential Loyalists
+CUST387,Alan Nunez,maychristine@example.net,Lake Melaniestad,2021-01-14,1,64.510000000,64.510000000,2021-01-30,2021-01-30,1,2021-01-14,2021-01-14,1,1,64.510000000,New Customers
+CUST155,Travis Johnson,erikarush@example.com,Hinesshire,2021-01-23,1,294.850000000,294.850000000,2021-01-30,2021-01-30,0,,,1,1,294.850000000,Potential Loyalists
+CUST080,Emily Smith,hdavis@example.com,Lake Marilynfort,2021-01-30,1,143.670000000,143.670000000,2021-01-30,2021-01-30,1,2021-01-26,2021-01-26,1,1,143.670000000,New Customers
+CUST464,Kimberly Hughes,jcannon@example.net,Marcusmouth,2021-01-17,1,375.770000000,375.770000000,2021-01-30,2021-01-30,1,2021-01-12,2021-01-12,1,1,375.770000000,Potential Loyalists
+CUST384,Bradley Davis,simsjason@example.net,Port Gina,2021-01-19,1,54.320000000,54.320000000,2021-01-30,2021-01-30,0,,,1,1,54.320000000,New Customers
+CUST055,Travis Marshall,katie29@example.net,Port Loriport,2021-01-30,1,243.110000000,243.110000000,2021-01-30,2021-01-30,1,2021-01-13,2021-01-13,1,1,243.110000000,Potential Loyalists
+CUST151,Robert Adams,acostachristian@example.net,New Kelly,2021-01-30,1,34.060000000,34.060000000,2021-01-30,2021-01-30,1,2021-01-31,2021-01-31,1,1,34.060000000,New Customers
+CUST419,Dennis Wood,ramseysarah@example.com,Jenniferton,2021-01-23,1,399.810000000,399.810000000,2021-01-30,2021-01-30,1,2021-01-29,2021-01-29,1,1,399.810000000,Potential Loyalists
+CUST467,Tanya Collier,dowen@example.com,Shortton,2021-01-21,1,339.150000000,339.150000000,2021-01-30,2021-01-30,1,2021-01-15,2021-01-15,1,1,339.150000000,Potential Loyalists
+CUST452,Alec Williams,lopezcurtis@example.com,Lake Samuel,2021-01-10,1,307.550000000,307.550000000,2021-01-30,2021-01-30,1,2021-01-15,2021-01-15,1,1,307.550000000,Potential Loyalists
+CUST438,Jason Bell,barbarasantos@example.net,Port Justin,2021-01-16,1,256.840000000,256.840000000,2021-01-30,2021-01-30,1,2021-01-16,2021-01-16,1,1,256.840000000,Potential Loyalists
+CUST361,Jeremy Berry,gatessergio@example.org,Mcgeetown,2021-01-28,1,427.190000000,427.190000000,2021-01-30,2021-01-30,1,2021-01-23,2021-01-23,1,1,427.190000000,Potential Loyalists
+CUST289,Jason Herrera,shannonford@example.org,East Lindseyport,2021-01-25,1,26.790000000,26.790000000,2021-01-30,2021-01-30,2,2021-01-28,2021-01-28,1,1,26.790000000,New Customers
+CUST166,Scott Miller,debra96@example.net,South Pamelaside,2021-01-30,1,437.030000000,437.030000000,2021-01-30,2021-01-30,1,2021-01-30,2021-01-30,1,1,437.030000000,Potential Loyalists
+CUST085,Patrick Thornton,qhughes@example.net,South Tammie,2021-01-27,1,23.320000000,23.320000000,2021-01-30,2021-01-30,1,2021-01-12,2021-01-12,1,1,23.320000000,New Customers
+CUST395,Erik Floyd,xhill@example.org,Nataliemouth,2021-01-29,1,321.630000000,321.630000000,2021-01-30,2021-01-30,0,,,1,1,321.630000000,Potential Loyalists
+CUST010,Anthony Rodriguez,laurahenderson@example.org,Jamesmouth,2021-01-27,1,108.810000000,108.810000000,2021-01-29,2021-01-29,1,2021-01-16,2021-01-16,2,1,108.810000000,New Customers
+CUST368,Mr. Thomas Thompson,jessicaanderson@example.com,Williamfurt,2021-01-14,1,243.680000000,243.680000000,2021-01-29,2021-01-29,1,2021-01-23,2021-01-23,2,1,243.680000000,Potential Loyalists
+CUST265,April Woods,brittneystone@example.com,North Heatherville,2021-01-17,1,372.790000000,372.790000000,2021-01-29,2021-01-29,3,2021-01-23,2021-01-24,2,1,372.790000000,Potential Loyalists
+CUST321,Kevin Chang,buckleyanna@example.org,Mikaylastad,2021-01-26,1,345.600000000,345.600000000,2021-01-29,2021-01-29,0,,,2,1,345.600000000,Potential Loyalists
+CUST279,David Garcia,perezwilliam@example.org,East Brandonstad,2021-01-13,1,357.090000000,357.090000000,2021-01-29,2021-01-29,0,,,2,1,357.090000000,Potential Loyalists
+CUST417,Sarah Hopkins,seanlyons@example.org,East Williammouth,2021-01-24,1,421.180000000,421.180000000,2021-01-29,2021-01-29,2,2021-01-22,2021-01-22,2,1,421.180000000,Potential Loyalists
+CUST282,Dr. Andrea Marshall,kiara45@example.org,Smithborough,2021-01-27,1,126.940000000,126.940000000,2021-01-29,2021-01-29,1,2021-01-29,2021-01-29,2,1,126.940000000,New Customers
+CUST500,Samantha Cortez,vcarr@example.net,New Danielmouth,2021-01-26,1,71.880000000,71.880000000,2021-01-29,2021-01-29,1,2021-01-24,2021-01-24,2,1,71.880000000,New Customers
+CUST240,Melissa Walker,peter98@example.org,Whitneyfort,2021-01-14,1,397.400000000,397.400000000,2021-01-29,2021-01-29,1,2021-01-18,2021-01-18,2,1,397.400000000,Potential Loyalists
+CUST022,James Brown,ysmith@example.com,Mitchellside,2021-01-27,1,282.460000000,282.460000000,2021-01-29,2021-01-29,0,,,2,1,282.460000000,Potential Loyalists
+CUST019,Jeff Owens,nuneztracey@example.org,South Jessicaville,2021-01-26,1,53.310000000,53.310000000,2021-01-29,2021-01-29,1,2021-01-20,2021-01-20,2,1,53.310000000,New Customers
+CUST455,Sandra Martinez,paulproctor@example.org,East Stevenville,2021-01-23,1,84.990000000,84.990000000,2021-01-29,2021-01-29,1,2021-01-16,2021-01-16,2,1,84.990000000,New Customers
+CUST372,Lauren Bender,icraig@example.com,Stokeshaven,2021-01-21,1,408.770000000,408.770000000,2021-01-29,2021-01-29,1,2021-01-31,2021-01-31,2,1,408.770000000,Potential Loyalists
+CUST300,Kevin Drake,robin05@example.net,New Stacy,2021-01-23,1,291.130000000,291.130000000,2021-01-29,2021-01-29,1,2021-01-15,2021-01-15,2,1,291.130000000,Potential Loyalists
+CUST210,Chelsea Gill,timothybooth@example.com,Susantown,2021-01-24,1,310.320000000,310.320000000,2021-01-29,2021-01-29,0,,,2,1,310.320000000,Potential Loyalists
+CUST446,Kyle Welch,omills@example.net,Reginafort,2021-01-29,1,261.350000000,261.350000000,2021-01-29,2021-01-29,1,2021-01-12,2021-01-12,2,1,261.350000000,Potential Loyalists
+CUST412,Jacqueline Williams,zperez@example.com,Bellshire,2021-01-20,1,330.070000000,330.070000000,2021-01-29,2021-01-29,1,2021-01-31,2021-01-31,2,1,330.070000000,Potential Loyalists
+CUST431,Daniel Ray,foxrodney@example.net,New Michaelburgh,2021-01-23,1,364.770000000,364.770000000,2021-01-29,2021-01-29,1,2021-01-14,2021-01-14,2,1,364.770000000,Potential Loyalists
+CUST482,Erica Glass,rodriguezrobert@example.com,Jamesstad,2021-01-22,1,64.630000000,64.630000000,2021-01-29,2021-01-29,1,2021-01-11,2021-01-11,2,1,64.630000000,New Customers
+CUST101,Audrey Williams,torrestravis@example.org,New Derek,2021-01-18,1,431.010000000,431.010000000,2021-01-28,2021-01-28,0,,,3,1,431.010000000,Potential Loyalists
+CUST100,David Johnson,rose31@example.net,Blankenshipport,2021-01-22,1,230.050000000,230.050000000,2021-01-28,2021-01-28,1,2021-01-13,2021-01-13,3,1,230.050000000,Potential Loyalists
+CUST178,Mikayla Silva,alexandriagriffith@example.com,Port Erin,2021-01-25,1,300.350000000,300.350000000,2021-01-28,2021-01-28,0,,,3,1,300.350000000,Potential Loyalists
+CUST011,Tricia Valencia,frazierdanny@example.net,Kaylamouth,2021-01-12,1,222.930000000,222.930000000,2021-01-28,2021-01-28,7,2021-01-23,2021-01-25,3,1,222.930000000,Potential Loyalists
+CUST160,William Conner,kristyjohnson@example.net,Tannerside,2021-01-26,1,60.070000000,60.070000000,2021-01-28,2021-01-28,1,2021-01-17,2021-01-17,3,1,60.070000000,New Customers
+CUST113,Parker Cain,willisanna@example.com,South Michaelchester,2021-01-18,1,97.710000000,97.710000000,2021-01-28,2021-01-28,1,2021-01-17,2021-01-17,3,1,97.710000000,New Customers
+CUST233,Jeffrey Colon,kevinmorrison@example.net,South Leon,2021-01-26,1,83.470000000,83.470000000,2021-01-28,2021-01-28,1,2021-01-12,2021-01-12,3,1,83.470000000,New Customers
+CUST440,Margaret Mcfarland,kwelch@example.com,North Fernandobury,2021-01-17,1,312.910000000,312.910000000,2021-01-28,2021-01-28,0,,,3,1,312.910000000,Potential Loyalists
+CUST095,Crystal Pham,danaoliver@example.net,Lake Colton,2021-01-20,1,445.790000000,445.790000000,2021-01-28,2021-01-28,0,,,3,1,445.790000000,Potential Loyalists
+CUST450,Sandra Walker,hendersonjohn@example.net,Justinside,2021-01-15,1,129.900000000,129.900000000,2021-01-28,2021-01-28,1,2021-01-29,2021-01-29,3,1,129.900000000,New Customers
+CUST026,Emily Baker,emilyevans@example.com,North Stephenshire,2021-01-23,1,321.520000000,321.520000000,2021-01-28,2021-01-28,1,2021-01-28,2021-01-28,3,1,321.520000000,Potential Loyalists
+CUST466,Sara Barrett,brandon39@example.net,North Sarahborough,2021-01-24,1,297.420000000,297.420000000,2021-01-28,2021-01-28,1,2021-01-12,2021-01-12,3,1,297.420000000,Potential Loyalists
+CUST342,Jeffrey Jordan,ysanford@example.org,New Jamesstad,2021-01-26,1,323.650000000,323.650000000,2021-01-28,2021-01-28,1,2021-01-27,2021-01-27,3,1,323.650000000,Potential Loyalists
+CUST425,Patricia Todd,lmaldonado@example.org,Wilsonland,2021-01-27,1,346.240000000,346.240000000,2021-01-28,2021-01-28,1,2021-01-25,2021-01-25,3,1,346.240000000,Potential Loyalists
+CUST287,Keith Graham,joelgreen@example.com,Haynesmouth,2021-01-23,1,428.270000000,428.270000000,2021-01-28,2021-01-28,1,2021-01-16,2021-01-16,3,1,428.270000000,Potential Loyalists
+CUST484,James Todd,rodriguezbrian@example.net,Port Marissa,2021-01-27,1,347.490000000,347.490000000,2021-01-27,2021-01-27,1,2021-01-29,2021-01-29,4,1,347.490000000,Potential Loyalists
+CUST314,Ryan Parker,qruiz@example.com,Lake Amyburgh,2021-01-11,1,200.630000000,200.630000000,2021-01-27,2021-01-27,1,2021-01-30,2021-01-30,4,1,200.630000000,Potential Loyalists
+CUST049,John Brown,xprice@example.net,Port Nicoleshire,2021-01-27,1,19.210000000,19.210000000,2021-01-27,2021-01-27,1,2021-01-22,2021-01-22,4,1,19.210000000,New Customers
+CUST218,Juan Smith,amanda40@example.net,Drakeburgh,2021-01-10,1,179.990000000,179.990000000,2021-01-27,2021-01-27,0,,,4,1,179.990000000,Potential Loyalists
+CUST003,Abigail Shaffer,jpeterson@example.org,Curtisfurt,2021-01-10,1,440.390000000,440.390000000,2021-01-27,2021-01-27,2,2021-01-15,2021-01-15,4,1,440.390000000,Potential Loyalists
+CUST317,Joseph Camacho,parmstrong@example.com,Christianton,2021-01-26,1,368.980000000,368.980000000,2021-01-27,2021-01-27,1,2021-01-18,2021-01-18,4,1,368.980000000,Potential Loyalists
+CUST205,Amy Gordon,jim95@example.net,Joelberg,2021-01-19,1,133.250000000,133.250000000,2021-01-26,2021-01-26,1,2021-01-11,2021-01-11,5,1,133.250000000,New Customers
+CUST478,Joseph Flores,markwolfe@example.org,Lake Jessicafurt,2021-01-18,1,317.830000000,317.830000000,2021-01-26,2021-01-26,1,2021-01-25,2021-01-25,5,1,317.830000000,Potential Loyalists
+CUST102,Michael Paul,umatthews@example.org,Penafort,2021-01-12,1,367.040000000,367.040000000,2021-01-26,2021-01-26,1,2021-01-13,2021-01-13,5,1,367.040000000,Potential Loyalists
+CUST270,Melissa Abbott,jamie98@example.org,Phillipston,2021-01-14,1,151.480000000,151.480000000,2021-01-26,2021-01-26,1,2021-01-12,2021-01-12,5,1,151.480000000,Potential Loyalists
+CUST217,Crystal Mann,robinsonstephen@example.org,Hopkinstown,2021-01-20,1,385.440000000,385.440000000,2021-01-26,2021-01-26,1,2021-01-24,2021-01-24,5,1,385.440000000,Potential Loyalists
+CUST388,Ashley Buchanan,catherine47@example.com,Shorttown,2021-01-18,1,363.870000000,363.870000000,2021-01-26,2021-01-26,2,2021-01-22,2021-01-22,5,1,363.870000000,Potential Loyalists
+CUST162,William Day,howens@example.com,Port Kimberly,2021-01-26,1,338.150000000,338.150000000,2021-01-26,2021-01-26,1,2021-01-15,2021-01-15,5,1,338.150000000,Potential Loyalists
+CUST179,Travis Rodriguez,alexanderrobert@example.com,South Warren,2021-01-10,1,57.470000000,57.470000000,2021-01-25,2021-01-25,1,2021-01-22,2021-01-22,6,1,57.470000000,Others
+CUST435,James Thomas,thomassmith@example.com,Taylorhaven,2021-01-21,1,60.220000000,60.220000000,2021-01-25,2021-01-25,0,,,6,1,60.220000000,Others
+CUST105,Rachel Harris DVM,brendali@example.org,Kimtown,2021-01-20,1,278.900000000,278.900000000,2021-01-25,2021-01-25,1,2021-01-19,2021-01-19,6,1,278.900000000,Potential Loyalists
+CUST381,Gregory Ware,mark43@example.net,Barajastown,2021-01-10,1,254.130000000,254.130000000,2021-01-25,2021-01-25,1,2021-01-22,2021-01-22,6,1,254.130000000,Potential Loyalists
+CUST362,Jason Hawkins,petersenlatoya@example.net,Pamelaside,2021-01-13,1,182.940000000,182.940000000,2021-01-25,2021-01-25,1,2021-01-11,2021-01-11,6,1,182.940000000,Potential Loyalists
+CUST355,James Jefferson,zbanks@example.org,East Heatherton,2021-01-24,1,167.460000000,167.460000000,2021-01-25,2021-01-25,1,2021-01-17,2021-01-17,6,1,167.460000000,Potential Loyalists
+CUST135,Brittany White,jenniferwilliams@example.com,South Cheryl,2021-01-23,1,230.820000000,230.820000000,2021-01-24,2021-01-24,1,2021-01-13,2021-01-13,7,1,230.820000000,Potential Loyalists
+CUST190,Nicholas Wong,alexisrogers@example.com,East Cheryl,2021-01-12,1,175.690000000,175.690000000,2021-01-24,2021-01-24,1,2021-01-15,2021-01-15,7,1,175.690000000,Potential Loyalists
+CUST109,John Morales,henryrenee@example.org,West Charleneland,2021-01-22,1,300.680000000,300.680000000,2021-01-24,2021-01-24,1,2021-01-17,2021-01-17,7,1,300.680000000,Potential Loyalists
+CUST338,Kevin Ford,ruizmichelle@example.net,South Pamelahaven,2021-01-23,1,138.450000000,138.450000000,2021-01-24,2021-01-24,1,2021-01-17,2021-01-17,7,1,138.450000000,Others
+CUST255,Shannon Bishop,imartin@example.org,Port Brian,2021-01-24,1,181.490000000,181.490000000,2021-01-24,2021-01-24,1,2021-01-26,2021-01-26,7,1,181.490000000,Potential Loyalists
+CUST147,Robin Thompson,epollard@example.net,Port Dennis,2021-01-13,1,390.030000000,390.030000000,2021-01-24,2021-01-24,1,2021-01-13,2021-01-13,7,1,390.030000000,Potential Loyalists
+CUST430,Sarah Watson,travis94@example.com,Port Sabrina,2021-01-14,1,359.250000000,359.250000000,2021-01-24,2021-01-24,3,2021-01-14,2021-01-27,7,1,359.250000000,Potential Loyalists
+CUST074,Jessica George,mnavarro@example.com,North Jeremyshire,2021-01-21,1,215.600000000,215.600000000,2021-01-24,2021-01-24,1,2021-01-14,2021-01-14,7,1,215.600000000,Potential Loyalists
+CUST033,Heather Castro,vdickson@example.org,Port Francisco,2021-01-23,1,378.960000000,378.960000000,2021-01-24,2021-01-24,1,2021-01-13,2021-01-13,7,1,378.960000000,Potential Loyalists
+CUST165,Anna Davidson,georgeweber@example.net,Meganshire,2021-01-19,1,295.970000000,295.970000000,2021-01-23,2021-01-23,0,,,8,1,295.970000000,Others
+CUST485,Greg Brock,shannon05@example.org,East Amy,2021-01-20,1,348.800000000,348.800000000,2021-01-23,2021-01-23,2,2021-01-22,2021-01-25,8,1,348.800000000,Others
+CUST451,Jennifer Castaneda,derrickrodriguez@example.com,Nelsonfort,2021-01-23,1,90.580000000,90.580000000,2021-01-23,2021-01-23,1,2021-01-28,2021-01-28,8,1,90.580000000,Others
+CUST442,Beth Young,shelby13@example.org,Garcialand,2021-01-13,1,334.380000000,334.380000000,2021-01-23,2021-01-23,1,2021-01-16,2021-01-16,8,1,334.380000000,Others
+CUST461,Andrew Mann,amy73@example.net,New Michael,2021-01-22,1,73.980000000,73.980000000,2021-01-23,2021-01-23,1,2021-01-31,2021-01-31,8,1,73.980000000,Others
+CUST457,Stephen Boyer,teresayoung@example.com,Alexisview,2021-01-17,1,344.230000000,344.230000000,2021-01-22,2021-01-22,1,2021-01-23,2021-01-23,9,1,344.230000000,Others
+CUST133,Meagan Calderon,lucasrodney@example.com,West Kyleborough,2021-01-15,1,237.140000000,237.140000000,2021-01-22,2021-01-22,1,2021-01-17,2021-01-17,9,1,237.140000000,Others
+CUST351,Aaron Powers,conleyelizabeth@example.org,Port Williamville,2021-01-14,1,406.200000000,406.200000000,2021-01-22,2021-01-22,1,2021-01-23,2021-01-23,9,1,406.200000000,Others
+CUST267,Raymond Mullins,darlenebyrd@example.org,New Debramouth,2021-01-16,1,173.440000000,173.440000000,2021-01-22,2021-01-22,1,2021-01-26,2021-01-26,9,1,173.440000000,Others
+CUST365,Amber Martin,lydianewton@example.com,West Cherylborough,2021-01-16,1,360.260000000,360.260000000,2021-01-21,2021-01-21,3,2021-01-21,2021-01-21,10,1,360.260000000,Others
+CUST118,Sophia Moore,craigjoseph@example.net,Tuckermouth,2021-01-18,1,407.050000000,407.050000000,2021-01-21,2021-01-21,1,2021-01-29,2021-01-29,10,1,407.050000000,Others
+CUST369,Lee Schwartz,joshuastuart@example.com,Ballardberg,2021-01-21,1,35.940000000,35.940000000,2021-01-21,2021-01-21,0,,,10,1,35.940000000,Others
+CUST006,Henry Santiago,lynchgeorge@example.net,East Steven,2021-01-17,1,299.350000000,299.350000000,2021-01-21,2021-01-21,3,2021-01-19,2021-01-25,10,1,299.350000000,Others
+CUST030,Sarah Davis,ccalderon@example.org,Kellieview,2021-01-18,1,52.500000000,52.500000000,2021-01-21,2021-01-21,1,2021-01-15,2021-01-15,10,1,52.500000000,Others
+CUST035,Janet Williams,dwalker@example.com,Loribury,2021-01-18,1,353.650000000,353.650000000,2021-01-21,2021-01-21,1,2021-01-10,2021-01-10,10,1,353.650000000,Others
+CUST280,Chris Velazquez,tranrobin@example.net,Walkerbury,2021-01-11,1,368.880000000,368.880000000,2021-01-21,2021-01-21,1,2021-01-14,2021-01-14,10,1,368.880000000,Others
+CUST434,James Hayes,tiffanyparks@example.org,Lindaside,2021-01-19,1,167.300000000,167.300000000,2021-01-20,2021-01-20,1,2021-01-27,2021-01-27,11,1,167.300000000,Others
+CUST469,Corey Sandoval,angelagrant@example.net,Port Daniellestad,2021-01-17,1,317.600000000,317.600000000,2021-01-20,2021-01-20,0,,,11,1,317.600000000,Others
+CUST462,Denise Guerra,caseymoore@example.com,Ambermouth,2021-01-11,1,309.760000000,309.760000000,2021-01-20,2021-01-20,1,2021-01-12,2021-01-12,11,1,309.760000000,Others
+CUST477,Felicia Hobbs,hbutler@example.org,Lake Kimberlyfurt,2021-01-12,1,239.460000000,239.460000000,2021-01-19,2021-01-19,2,2021-01-21,2021-01-25,12,1,239.460000000,At Risk
+CUST228,Emily Rodriguez,hahnsean@example.com,East Christopherchester,2021-01-17,1,316.890000000,316.890000000,2021-01-19,2021-01-19,0,,,12,1,316.890000000,At Risk
+CUST297,Keith Morris,hector59@example.org,Port Kimberlyton,2021-01-18,1,34.700000000,34.700000000,2021-01-19,2021-01-19,2,2021-01-29,2021-01-31,12,1,34.700000000,At Risk
+CUST061,Catherine Lewis,matthew94@example.net,New Stacyland,2021-01-11,1,352.110000000,352.110000000,2021-01-19,2021-01-19,1,2021-01-13,2021-01-13,12,1,352.110000000,At Risk
+CUST261,Walter Summers,sadams@example.com,New Melissa,2021-01-11,1,195.740000000,195.740000000,2021-01-19,2021-01-19,1,2021-01-27,2021-01-27,12,1,195.740000000,At Risk
+CUST416,Kristin White,tking@example.net,Kimfurt,2021-01-15,1,257.020000000,257.020000000,2021-01-19,2021-01-19,0,,,12,1,257.020000000,At Risk
+CUST223,Cassie Jefferson,alibrenda@example.net,Hickmanport,2021-01-17,1,345.760000000,345.760000000,2021-01-18,2021-01-18,1,2021-01-13,2021-01-13,13,1,345.760000000,At Risk
+CUST198,Megan Parker,fosterlisa@example.net,New Charles,2021-01-18,1,85.860000000,85.860000000,2021-01-18,2021-01-18,1,2021-01-16,2021-01-16,13,1,85.860000000,At Risk
+CUST410,James Anderson,harrismichele@example.net,Serranoville,2021-01-11,1,323.760000000,323.760000000,2021-01-18,2021-01-18,2,2021-01-27,2021-01-27,13,1,323.760000000,At Risk
+CUST488,Alicia Dillon,yhall@example.net,West Toddside,2021-01-18,1,77.110000000,77.110000000,2021-01-18,2021-01-18,1,2021-01-28,2021-01-28,13,1,77.110000000,At Risk
+CUST036,Matthew Ross,michelle45@example.net,Frazierside,2021-01-14,1,337.320000000,337.320000000,2021-01-18,2021-01-18,1,2021-01-19,2021-01-19,13,1,337.320000000,At Risk
+CUST358,Alexandria Oneill,tiffanysantiago@example.com,South Dorothybury,2021-01-10,1,263.730000000,263.730000000,2021-01-17,2021-01-17,1,2021-01-28,2021-01-28,14,1,263.730000000,At Risk
+CUST295,Kathleen Andrade,rbrown@example.com,South James,2021-01-10,1,327.570000000,327.570000000,2021-01-17,2021-01-17,1,2021-01-22,2021-01-22,14,1,327.570000000,At Risk
+CUST386,Brandon Brown,angela93@example.com,Hughesfurt,2021-01-13,1,52.280000000,52.280000000,2021-01-16,2021-01-16,2,2021-01-18,2021-01-18,15,1,52.280000000,At Risk
+CUST449,Rebecca Kelley,robertcastro@example.com,East Jennifer,2021-01-15,1,19.030000000,19.030000000,2021-01-16,2021-01-16,1,2021-01-20,2021-01-20,15,1,19.030000000,At Risk
+CUST493,Melinda Harris,kylethornton@example.net,South Wendy,2021-01-13,1,339.890000000,339.890000000,2021-01-16,2021-01-16,1,2021-01-27,2021-01-27,15,1,339.890000000,At Risk
+CUST125,Charles Gonzalez,kathleenrios@example.org,Marshallshire,2021-01-14,1,306.380000000,306.380000000,2021-01-15,2021-01-15,1,2021-01-17,2021-01-17,16,1,306.380000000,At Risk
+CUST131,Maria Jones,grantpaul@example.com,West Christopher,2021-01-14,1,323.320000000,323.320000000,2021-01-15,2021-01-15,9,2021-01-17,2021-01-18,16,1,323.320000000,At Risk
+CUST227,Angelica Montgomery,jennifermiller@example.org,Dawsonberg,2021-01-11,1,310.930000000,310.930000000,2021-01-14,2021-01-14,1,2021-01-15,2021-01-15,17,1,310.930000000,At Risk
+CUST433,Dennis Adams,michael76@example.org,Haynesstad,2021-01-11,1,149.130000000,149.130000000,2021-01-14,2021-01-14,1,2021-01-23,2021-01-23,17,1,149.130000000,At Risk
+CUST148,Terri Johnson,bradleygonzalez@example.org,Sarahhaven,2021-01-31,2,619.080000000,309.540000000,2021-01-31,2021-01-31,2,2021-01-17,2021-01-17,0,2,619.080000000,Loyal Customers
+CUST039,Tammie Hanson,cortezkevin@example.com,Nguyenport,2021-01-13,2,616.960000000,308.480000000,2021-01-28,2021-01-31,1,2021-01-24,2021-01-24,0,2,616.960000000,Loyal Customers
+CUST315,James Lopez,bakersteven@example.org,Anneberg,2021-01-28,2,496.190000000,248.100000000,2021-01-28,2021-01-31,1,2021-01-29,2021-01-29,0,2,496.190000000,Loyal Customers
+CUST045,Barbara Anderson,jcontreras@example.net,Stephaniemouth,2021-01-29,2,638.370000000,319.190000000,2021-01-29,2021-01-31,1,2021-01-14,2021-01-14,0,2,638.370000000,Loyal Customers
+CUST235,Timothy Gonzalez,erinpierce@example.net,Hahnborough,2021-01-18,2,128.970000000,64.490000000,2021-01-21,2021-01-31,1,2021-01-31,2021-01-31,0,2,128.970000000,Others
+CUST429,Ruben Huff,eric11@example.org,Austinside,2021-01-27,2,390.800000000,195.400000000,2021-01-27,2021-01-31,1,2021-01-18,2021-01-18,0,2,390.800000000,Potential Loyalists
+CUST309,John Shields,franciscojones@example.org,Andrewview,2021-01-28,2,651.410000000,325.710000000,2021-01-28,2021-01-31,1,2021-01-19,2021-01-19,0,2,651.410000000,Loyal Customers
+CUST378,Christopher Palmer,rwilliams@example.net,Davidshire,2021-01-29,2,758.130000000,379.070000000,2021-01-30,2021-01-31,1,2021-01-31,2021-01-31,0,2,758.130000000,Loyal Customers
+CUST186,Brenda Oconnell,richarddonovan@example.com,Santosport,2021-01-28,2,521.430000000,260.720000000,2021-01-30,2021-01-31,1,2021-01-28,2021-01-28,0,2,521.430000000,Loyal Customers
+CUST107,Alexis Baker,judyfox@example.net,South Shanestad,2021-01-30,2,817.860000000,408.930000000,2021-01-30,2021-01-31,1,2021-01-27,2021-01-27,0,2,817.860000000,Loyal Customers
+CUST405,Mason Lewis,ericguzman@example.org,South Lisa,2021-01-11,2,529.420000000,264.710000000,2021-01-13,2021-01-31,1,2021-01-11,2021-01-11,0,2,529.420000000,Loyal Customers
+CUST299,Nancy Gallagher,barbaramcgrath@example.com,Savannahburgh,2021-01-19,2,882.420000000,441.210000000,2021-01-30,2021-01-31,1,2021-01-14,2021-01-14,0,2,882.420000000,Loyal Customers
+CUST132,Sydney Collins,tanderson@example.org,Angelicamouth,2021-01-30,2,526.280000000,263.140000000,2021-01-30,2021-01-31,0,,,0,2,526.280000000,Loyal Customers
+CUST057,Raymond Jefferson,hoganashlee@example.org,Amandastad,2021-01-21,2,701.920000000,350.960000000,2021-01-25,2021-01-31,2,2021-01-13,2021-01-14,0,2,701.920000000,Loyal Customers
+CUST318,Stephanie Mcbride,davidtodd@example.org,East Lindsey,2021-01-26,2,277.440000000,138.720000000,2021-01-30,2021-01-31,1,2021-01-25,2021-01-25,0,2,277.440000000,Potential Loyalists
+CUST423,Hannah Richmond,jeremy37@example.com,West Gregoryhaven,2021-01-12,2,451.380000000,225.690000000,2021-01-14,2021-01-31,1,2021-01-13,2021-01-13,0,2,451.380000000,Loyal Customers
+CUST025,Todd Hudson,harveyrobert@example.net,Sarahborough,2021-01-27,2,585.080000000,292.540000000,2021-01-27,2021-01-31,3,2021-01-14,2021-01-22,0,2,585.080000000,Loyal Customers
+CUST447,Regina Ramos,robert24@example.org,New Lisaberg,2021-01-14,2,352.630000000,176.320000000,2021-01-15,2021-01-31,1,2021-01-16,2021-01-16,0,2,352.630000000,Potential Loyalists
+CUST142,Kimberly Acosta,srodriguez@example.org,Davidbury,2021-01-26,2,301.820000000,150.910000000,2021-01-29,2021-01-31,0,,,0,2,301.820000000,Potential Loyalists
+CUST420,Samantha Bowman,qsmith@example.net,Jameshaven,2021-01-27,2,504.850000000,252.430000000,2021-01-30,2021-01-31,0,,,0,2,504.850000000,Loyal Customers
+CUST208,Michael Shaffer,harttammy@example.net,South John,2021-01-30,2,494.350000000,247.180000000,2021-01-31,2021-01-31,0,,,0,2,494.350000000,Loyal Customers
+CUST399,Donna Marshall,sanderswayne@example.net,Port Tamara,2021-01-31,2,337.300000000,168.650000000,2021-01-31,2021-01-31,1,2021-01-11,2021-01-11,0,2,337.300000000,Potential Loyalists
+CUST427,James Goodman,charles27@example.com,Jefferyshire,2021-01-21,2,512.890000000,256.450000000,2021-01-21,2021-01-31,0,,,0,2,512.890000000,Loyal Customers
+CUST097,Carlos Ryan,alyssa42@example.com,Coffeyport,2021-01-17,2,568.090000000,284.050000000,2021-01-25,2021-01-31,0,,,0,2,568.090000000,Loyal Customers
+CUST176,William Stevenson,brittney88@example.net,Ericksonport,2021-01-29,2,496.590000000,248.300000000,2021-01-30,2021-01-31,0,,,0,2,496.590000000,Loyal Customers
+CUST335,Andrew Erickson,matthewreeves@example.net,Knoxstad,2021-01-11,2,381.400000000,190.700000000,2021-01-11,2021-01-31,0,,,0,2,381.400000000,Potential Loyalists
+CUST418,Lisa Cohen,martintamara@example.org,Port Dustinchester,2021-01-27,2,333.320000000,166.660000000,2021-01-28,2021-01-31,1,2021-01-14,2021-01-14,0,2,333.320000000,Potential Loyalists
+CUST302,April Hardin,lindsaypeterson@example.org,Brianberg,2021-01-31,2,90.440000000,45.220000000,2021-01-31,2021-01-31,1,2021-01-30,2021-01-30,0,2,90.440000000,Others
+CUST117,Joseph Bennett,xpeterson@example.com,Kimberlyshire,2021-01-27,2,57.650000000,28.830000000,2021-01-31,2021-01-31,2,2021-01-15,2021-01-18,0,2,57.650000000,Others
+CUST126,Joann Glass,michelle52@example.com,South Scottport,2021-01-26,2,254.460000000,127.230000000,2021-01-26,2021-01-31,2,2021-01-15,2021-01-16,0,2,254.460000000,Potential Loyalists
+CUST242,Hannah Davis,tflores@example.org,North Melindaville,2021-01-28,2,617.970000000,308.990000000,2021-01-29,2021-01-31,1,2021-01-21,2021-01-21,0,2,617.970000000,Loyal Customers
+CUST379,Abigail Owens,billmcfarland@example.net,Port Sarahport,2021-01-30,2,369.570000000,184.790000000,2021-01-30,2021-01-31,1,2021-01-26,2021-01-26,0,2,369.570000000,Potential Loyalists
+CUST439,Jordan Hampton,ypreston@example.net,Stevenberg,2021-01-31,2,256.480000000,128.240000000,2021-01-31,2021-01-31,1,2021-01-27,2021-01-27,0,2,256.480000000,Potential Loyalists
+CUST068,Mark Brown,lisaavery@example.org,North Angela,2021-01-22,2,575.130000000,287.570000000,2021-01-30,2021-01-31,1,2021-01-25,2021-01-25,0,2,575.130000000,Loyal Customers
+CUST108,Ashley Gordon,acostaregina@example.net,Stephentown,2021-01-25,2,687.350000000,343.680000000,2021-01-31,2021-01-31,1,2021-01-30,2021-01-30,0,2,687.350000000,Loyal Customers
+CUST259,Mark Beard,powellkara@example.net,Shawnfort,2021-01-30,2,225.000000000,112.500000000,2021-01-30,2021-01-31,1,2021-01-14,2021-01-14,0,2,225.000000000,Potential Loyalists
+CUST008,Derek Clark,jason76@example.net,Thomasberg,2021-01-13,2,428.700000000,214.350000000,2021-01-24,2021-01-30,0,,,1,2,428.700000000,Loyal Customers
+CUST274,Jessica Morales,joshuacollins@example.net,Port Eric,2021-01-24,2,584.330000000,292.170000000,2021-01-27,2021-01-30,5,2021-01-21,2021-01-25,1,2,584.330000000,Loyal Customers
+CUST093,Christina Cruz,yrodriguez@example.net,Baileyport,2021-01-17,2,373.850000000,186.930000000,2021-01-21,2021-01-30,0,,,1,2,373.850000000,Potential Loyalists
+CUST174,Brent Brooks,angela52@example.org,Porterton,2021-01-26,2,547.180000000,273.590000000,2021-01-27,2021-01-30,1,2021-01-17,2021-01-17,1,2,547.180000000,Loyal Customers
+CUST084,Jamie Cantu,tinaallen@example.com,Port Kimberly,2021-01-15,2,875.480000000,437.740000000,2021-01-27,2021-01-30,2,2021-01-10,2021-01-11,1,2,875.480000000,Loyal Customers
+CUST211,Colton Figueroa,srocha@example.net,South Rose,2021-01-26,2,661.330000000,330.670000000,2021-01-28,2021-01-30,0,,,1,2,661.330000000,Loyal Customers
+CUST336,Sarah Pittman,kellyruiz@example.net,Jessicaside,2021-01-29,2,560.580000000,280.290000000,2021-01-29,2021-01-30,1,2021-01-22,2021-01-22,1,2,560.580000000,Loyal Customers
+CUST470,Michele Simmons,jacksonhenry@example.com,Dianeside,2021-01-17,2,150.260000000,75.130000000,2021-01-26,2021-01-30,1,2021-01-12,2021-01-12,1,2,150.260000000,Potential Loyalists
+CUST164,Michael Reed,meghan43@example.net,Davidport,2021-01-30,2,198.470000000,99.240000000,2021-01-30,2021-01-30,0,,,1,2,198.470000000,Potential Loyalists
+CUST237,Rachel Jones,iaguilar@example.net,Stephensstad,2021-01-25,2,397.370000000,198.690000000,2021-01-28,2021-01-30,1,2021-01-18,2021-01-18,1,2,397.370000000,Potential Loyalists
+CUST490,Michael Kelly,joel84@example.org,Natashatown,2021-01-28,2,703.600000000,351.800000000,2021-01-30,2021-01-30,1,2021-01-24,2021-01-24,1,2,703.600000000,Loyal Customers
+CUST288,Dillon Jones,derekcarrillo@example.org,North Frank,2021-01-25,2,445.990000000,223.000000000,2021-01-26,2021-01-30,1,2021-01-23,2021-01-23,1,2,445.990000000,Loyal Customers
+CUST264,Isaac Miller,brettgarrett@example.net,South Diana,2021-01-13,2,506.460000000,253.230000000,2021-01-25,2021-01-30,1,2021-01-19,2021-01-19,1,2,506.460000000,Loyal Customers
+CUST325,Jason Brewer,scottmcintyre@example.com,Malonestad,2021-01-29,2,310.520000000,155.260000000,2021-01-29,2021-01-30,1,2021-01-14,2021-01-14,1,2,310.520000000,Potential Loyalists
+CUST222,Tamara Hall,enelson@example.net,Rachelshire,2021-01-28,2,668.140000000,334.070000000,2021-01-28,2021-01-30,1,2021-01-28,2021-01-28,1,2,668.140000000,Loyal Customers
+CUST158,Jodi Roach,zosborn@example.net,Elizabethland,2021-01-10,2,198.040000000,99.020000000,2021-01-18,2021-01-30,1,2021-01-19,2021-01-19,1,2,198.040000000,Potential Loyalists
+CUST007,Timothy Watts,gabriellecameron@example.org,Port Antonio,2021-01-14,2,721.580000000,360.790000000,2021-01-27,2021-01-30,0,,,1,2,721.580000000,Loyal Customers
+CUST311,Jessica Valdez,gmoore@example.com,East Robert,2021-01-11,2,554.140000000,277.070000000,2021-01-25,2021-01-30,1,2021-01-24,2021-01-24,1,2,554.140000000,Loyal Customers
+CUST367,Steven Ellis,tamarasmith@example.net,New Savannahshire,2021-01-18,2,783.720000000,391.860000000,2021-01-24,2021-01-30,1,2021-01-26,2021-01-26,1,2,783.720000000,Loyal Customers
+CUST230,James Miller,ashleyjackson@example.com,East Joseph,2021-01-11,2,240.750000000,120.380000000,2021-01-30,2021-01-30,2,2021-01-27,2021-01-27,1,2,240.750000000,Potential Loyalists
+CUST498,Darrell Ortiz,schaeferstephanie@example.org,Port James,2021-01-23,2,773.610000000,386.810000000,2021-01-25,2021-01-30,1,2021-01-14,2021-01-14,1,2,773.610000000,Loyal Customers
+CUST266,Jennifer Anderson MD,zdavis@example.org,West Michaelport,2021-01-16,2,283.080000000,141.540000000,2021-01-19,2021-01-30,1,2021-01-12,2021-01-12,1,2,283.080000000,Potential Loyalists
+CUST082,Kyle Francis,michellehill@example.com,Sarahhaven,2021-01-29,2,314.130000000,157.070000000,2021-01-30,2021-01-30,1,2021-01-12,2021-01-12,1,2,314.130000000,Potential Loyalists
+CUST029,Brittney Campbell,jenniferharris@example.net,Williamview,2021-01-28,2,556.430000000,278.220000000,2021-01-28,2021-01-30,1,2021-01-12,2021-01-12,1,2,556.430000000,Loyal Customers
+CUST140,Jonathan Young,brooksanthony@example.org,Laceyberg,2021-01-29,2,711.750000000,355.880000000,2021-01-30,2021-01-30,0,,,1,2,711.750000000,Loyal Customers
+CUST465,Joseph Jones,gregoryjohnson@example.org,Leeton,2021-01-16,2,569.330000000,284.670000000,2021-01-19,2021-01-29,1,2021-01-11,2021-01-11,2,2,569.330000000,Loyal Customers
+CUST199,Michael Weaver,michaelcesar@example.com,West Robertberg,2021-01-26,2,400.370000000,200.190000000,2021-01-27,2021-01-29,5,2021-01-12,2021-01-22,2,2,400.370000000,Loyal Customers
+CUST278,Denise Brown,crawfordwilliam@example.org,Villarrealburgh,2021-01-27,2,494.100000000,247.050000000,2021-01-29,2021-01-29,1,2021-01-21,2021-01-21,2,2,494.100000000,Loyal Customers
+CUST337,Catherine Frazier,destiny35@example.org,Robertmouth,2021-01-12,2,308.980000000,154.490000000,2021-01-13,2021-01-29,1,2021-01-25,2021-01-25,2,2,308.980000000,Potential Loyalists
+CUST058,Matthew Smith,gshort@example.com,Cynthiamouth,2021-01-28,2,693.350000000,346.680000000,2021-01-28,2021-01-29,1,2021-01-29,2021-01-29,2,2,693.350000000,Loyal Customers
+CUST031,Jeremy Thornton,rodriguezsierra@example.net,New Barry,2021-01-10,2,371.660000000,185.830000000,2021-01-10,2021-01-29,1,2021-01-13,2021-01-13,2,2,371.660000000,Potential Loyalists
+CUST254,Dennis Atkins,gonzalesvictoria@example.org,Port Joan,2021-01-23,2,133.960000000,66.980000000,2021-01-23,2021-01-29,1,2021-01-27,2021-01-27,2,2,133.960000000,Others
+CUST359,Mr. Martin Hernandez,smithsarah@example.net,Christianburgh,2021-01-24,2,403.770000000,201.890000000,2021-01-25,2021-01-29,0,,,2,2,403.770000000,Loyal Customers
+CUST221,Amy Smith,christopherbruce@example.net,Arielville,2021-01-17,2,627.290000000,313.650000000,2021-01-18,2021-01-29,1,2021-01-23,2021-01-23,2,2,627.290000000,Loyal Customers
+CUST276,Logan Brown,davidzimmerman@example.net,East Tylerstad,2021-01-12,2,518.730000000,259.370000000,2021-01-17,2021-01-29,2,2021-01-27,2021-01-28,2,2,518.730000000,Loyal Customers
+CUST348,Joshua Wells,jamiejennings@example.org,Robertville,2021-01-17,2,534.210000000,267.110000000,2021-01-29,2021-01-29,2,2021-01-25,2021-01-25,2,2,534.210000000,Loyal Customers
+CUST099,Richard Smith,gibsonemily@example.net,Brendastad,2021-01-20,2,580.300000000,290.150000000,2021-01-23,2021-01-29,2,2021-01-12,2021-01-13,2,2,580.300000000,Loyal Customers
+CUST154,Nicole Moore,thomascathy@example.com,East Carlosstad,2021-01-19,2,808.690000000,404.350000000,2021-01-29,2021-01-29,1,2021-01-27,2021-01-27,2,2,808.690000000,Loyal Customers
+CUST263,Aaron Rubio,wendyblankenship@example.net,Erikview,2021-01-20,2,453.550000000,226.780000000,2021-01-20,2021-01-29,0,,,2,2,453.550000000,Loyal Customers
+CUST316,Mary Miller,lindsey69@example.org,Port Paulhaven,2021-01-25,2,569.400000000,284.700000000,2021-01-28,2021-01-29,0,,,2,2,569.400000000,Loyal Customers
+CUST028,Lisa Archer,contrerasangela@example.net,East Josephville,2021-01-24,2,634.180000000,317.090000000,2021-01-25,2021-01-29,1,2021-01-21,2021-01-21,2,2,634.180000000,Loyal Customers
+CUST206,Ms. Jennifer Hill,conniesimmons@example.com,West Shellyfurt,2021-01-22,2,142.610000000,71.310000000,2021-01-23,2021-01-29,1,2021-01-12,2021-01-12,2,2,142.610000000,Others
+CUST112,Brandon Simmons,nicholas27@example.org,Port Christopherchester,2021-01-14,2,479.680000000,239.840000000,2021-01-27,2021-01-29,1,2021-01-26,2021-01-26,2,2,479.680000000,Loyal Customers
+CUST363,Michael Clements,marcia37@example.com,Moranstad,2021-01-12,2,521.140000000,260.570000000,2021-01-16,2021-01-29,1,2021-01-27,2021-01-27,2,2,521.140000000,Loyal Customers
+CUST273,Austin Baker,livingstonstacy@example.com,Courtneyhaven,2021-01-18,2,438.400000000,219.200000000,2021-01-25,2021-01-29,1,2021-01-18,2021-01-18,2,2,438.400000000,Loyal Customers
+CUST182,Todd Hendrix,janet75@example.com,Annview,2021-01-19,2,515.990000000,258.000000000,2021-01-21,2021-01-29,1,2021-01-14,2021-01-14,2,2,515.990000000,Loyal Customers
+CUST347,Lisa Wheeler,stanleydesiree@example.org,Lake Darrellmouth,2021-01-20,2,291.350000000,145.680000000,2021-01-23,2021-01-28,1,2021-01-21,2021-01-21,3,2,291.350000000,Potential Loyalists
+CUST052,Jeffrey Camacho,brentgray@example.org,Murphyfurt,2021-01-12,2,769.140000000,384.570000000,2021-01-27,2021-01-28,1,2021-01-12,2021-01-12,3,2,769.140000000,Loyal Customers
+CUST380,Kenneth Howard DDS,alicia28@example.org,South Amy,2021-01-26,2,352.520000000,176.260000000,2021-01-27,2021-01-28,6,2021-01-16,2021-01-19,3,2,352.520000000,Potential Loyalists
+CUST398,Kristen Stephens,jvaldez@example.com,Walkershire,2021-01-16,2,490.040000000,245.020000000,2021-01-23,2021-01-28,0,,,3,2,490.040000000,Loyal Customers
+CUST271,Rebecca Allen,frodriguez@example.net,New Pamelatown,2021-01-23,2,323.650000000,161.830000000,2021-01-28,2021-01-28,1,2021-01-20,2021-01-20,3,2,323.650000000,Potential Loyalists
+CUST310,Angela Jackson,emartin@example.net,West Brookefort,2021-01-27,2,407.140000000,203.570000000,2021-01-27,2021-01-28,1,2021-01-11,2021-01-11,3,2,407.140000000,Loyal Customers
+CUST172,Adam Rodriguez,nicoleluna@example.com,Brandonton,2021-01-15,2,504.320000000,252.160000000,2021-01-17,2021-01-28,1,2021-01-19,2021-01-19,3,2,504.320000000,Loyal Customers
+CUST224,David Davenport,irhodes@example.com,Camposberg,2021-01-10,2,527.540000000,263.770000000,2021-01-22,2021-01-28,0,,,3,2,527.540000000,Loyal Customers
+CUST127,Leslie Bell,collinsshannon@example.org,Marieland,2021-01-25,2,460.990000000,230.500000000,2021-01-27,2021-01-28,1,2021-01-26,2021-01-26,3,2,460.990000000,Loyal Customers
+CUST445,Matthew Dalton,michelle78@example.com,Taylorside,2021-01-23,2,808.390000000,404.200000000,2021-01-23,2021-01-28,3,2021-01-15,2021-01-18,3,2,808.390000000,Loyal Customers
+CUST163,Catherine Burch,dshaw@example.org,West Fred,2021-01-13,2,579.310000000,289.660000000,2021-01-24,2021-01-28,0,,,3,2,579.310000000,Loyal Customers
+CUST243,Carly Riggs,zacharyarnold@example.com,Mullenbury,2021-01-25,2,327.540000000,163.770000000,2021-01-26,2021-01-27,1,2021-01-24,2021-01-24,4,2,327.540000000,Potential Loyalists
+CUST089,Nicole Hamilton MD,wallaceheather@example.org,West Lauraport,2021-01-22,2,546.290000000,273.150000000,2021-01-24,2021-01-27,0,,,4,2,546.290000000,Loyal Customers
+CUST256,Douglas Ryan,tiffany44@example.net,Stephaniehaven,2021-01-11,2,478.870000000,239.440000000,2021-01-24,2021-01-27,1,2021-01-19,2021-01-19,4,2,478.870000000,Loyal Customers
+CUST406,Karen Mendoza,brittanyholland@example.com,East Bradleyshire,2021-01-12,2,340.930000000,170.470000000,2021-01-17,2021-01-27,1,2021-01-28,2021-01-28,4,2,340.930000000,Potential Loyalists
+CUST424,Benjamin Phillips,prattsue@example.net,Heatherfurt,2021-01-14,2,347.680000000,173.840000000,2021-01-15,2021-01-27,1,2021-01-12,2021-01-12,4,2,347.680000000,Potential Loyalists
+CUST192,James Griffin,stephanie49@example.net,West Desireebury,2021-01-14,2,530.450000000,265.230000000,2021-01-26,2021-01-27,3,2021-01-10,2021-01-15,4,2,530.450000000,Loyal Customers
+CUST497,Michael Woods,xjoseph@example.org,Henryberg,2021-01-20,2,500.060000000,250.030000000,2021-01-21,2021-01-27,1,2021-01-25,2021-01-25,4,2,500.060000000,Loyal Customers
+CUST215,Gail Hines,plevy@example.net,Murraystad,2021-01-17,2,698.240000000,349.120000000,2021-01-26,2021-01-27,1,2021-01-17,2021-01-17,4,2,698.240000000,Loyal Customers
+CUST328,Dana Burns,ethompson@example.net,Maxview,2021-01-17,2,297.130000000,148.570000000,2021-01-26,2021-01-27,1,2021-01-12,2021-01-12,4,2,297.130000000,Potential Loyalists
+CUST004,Ryan Munoz,blairamanda@example.com,New Kellystad,2021-01-18,2,704.710000000,352.360000000,2021-01-26,2021-01-26,1,2021-01-23,2021-01-23,5,2,704.710000000,Loyal Customers
+CUST454,Ryan Lynn,adamsphilip@example.net,Whiteview,2021-01-20,2,452.170000000,226.090000000,2021-01-20,2021-01-26,0,,,5,2,452.170000000,Loyal Customers
+CUST143,Riley Bryant,copelandvincent@example.net,Lake Zacharybury,2021-01-18,2,265.930000000,132.970000000,2021-01-25,2021-01-26,1,2021-01-22,2021-01-22,5,2,265.930000000,Potential Loyalists
+CUST002,David Guzman,jennifermiles@example.com,South Bridget,2021-01-13,2,441.530000000,220.770000000,2021-01-21,2021-01-26,1,2021-01-18,2021-01-18,5,2,441.530000000,Loyal Customers
+CUST286,Kelly Haynes,stephen19@example.org,Lake Lori,2021-01-15,2,552.320000000,276.160000000,2021-01-22,2021-01-26,1,2021-01-14,2021-01-14,5,2,552.320000000,Loyal Customers
+CUST307,Michael Fowler,sean43@example.org,West Jonathanville,2021-01-16,2,409.060000000,204.530000000,2021-01-17,2021-01-26,1,2021-01-11,2021-01-11,5,2,409.060000000,Loyal Customers
+CUST474,Kayla Duncan,clintonstevens@example.org,West Michael,2021-01-22,2,617.480000000,308.740000000,2021-01-23,2021-01-26,2,2021-01-21,2021-01-21,5,2,617.480000000,Loyal Customers
+CUST492,Kenneth Simmons,renee57@example.net,East Denise,2021-01-11,2,447.800000000,223.900000000,2021-01-13,2021-01-26,1,2021-01-20,2021-01-20,5,2,447.800000000,Loyal Customers
+CUST171,Brandon Long MD,jasongomez@example.org,Troyfort,2021-01-21,2,354.740000000,177.370000000,2021-01-23,2021-01-26,0,,,5,2,354.740000000,Potential Loyalists
+CUST018,Miranda Khan,esanchez@example.com,North Collin,2021-01-17,2,559.380000000,279.690000000,2021-01-24,2021-01-26,1,2021-01-19,2021-01-19,5,2,559.380000000,Loyal Customers
+CUST354,Marco Johns,watsonmatthew@example.org,Rossmouth,2021-01-19,2,399.400000000,199.700000000,2021-01-22,2021-01-26,1,2021-01-14,2021-01-14,5,2,399.400000000,Potential Loyalists
+CUST322,Deborah Pena,rjohnson@example.com,New Charlotte,2021-01-12,2,586.180000000,293.090000000,2021-01-15,2021-01-25,1,2021-01-27,2021-01-27,6,2,586.180000000,Loyal Customers
+CUST489,Cristian Rasmussen,williamssandra@example.com,Tracyburgh,2021-01-15,2,356.980000000,178.490000000,2021-01-16,2021-01-25,1,2021-01-18,2021-01-18,6,2,356.980000000,Potential Loyalists
+CUST251,Ryan Burns,cunninghamlaura@example.org,Antoniobury,2021-01-23,2,672.200000000,336.100000000,2021-01-24,2021-01-25,1,2021-01-22,2021-01-22,6,2,672.200000000,Loyal Customers
+CUST357,Allen Cohen,timothyfreeman@example.com,Williamsview,2021-01-12,2,537.690000000,268.850000000,2021-01-16,2021-01-25,1,2021-01-13,2021-01-13,6,2,537.690000000,Loyal Customers
+CUST014,David Bradley,millertodd@example.org,East Donna,2021-01-11,2,699.940000000,349.970000000,2021-01-21,2021-01-25,1,2021-01-26,2021-01-26,6,2,699.940000000,Loyal Customers
+CUST404,Heather Parrish,msparks@example.org,South Gabriel,2021-01-18,2,500.010000000,250.010000000,2021-01-23,2021-01-25,0,,,6,2,500.010000000,Loyal Customers
+CUST305,Jamie Gross,david09@example.com,East Carriebury,2021-01-16,2,420.200000000,210.100000000,2021-01-22,2021-01-25,0,,,6,2,420.200000000,Loyal Customers
+CUST298,Kaitlyn Howard,terrigarcia@example.net,West Amanda,2021-01-24,2,455.280000000,227.640000000,2021-01-25,2021-01-25,0,,,6,2,455.280000000,Loyal Customers
+CUST201,Scott Wilson,urice@example.org,Port Andrewport,2021-01-23,2,260.560000000,130.280000000,2021-01-23,2021-01-24,1,2021-01-19,2021-01-19,7,2,260.560000000,Potential Loyalists
+CUST150,Jacob Preston,ykline@example.com,South Heather,2021-01-18,2,318.250000000,159.130000000,2021-01-18,2021-01-24,1,2021-01-14,2021-01-14,7,2,318.250000000,Potential Loyalists
+CUST459,Jonathan Parks,sarah00@example.com,Lake Amanda,2021-01-15,2,423.470000000,211.740000000,2021-01-23,2021-01-24,1,2021-01-31,2021-01-31,7,2,423.470000000,Loyal Customers
+CUST044,David Douglas Jr.,osbornejeffery@example.net,Williamsbury,2021-01-21,2,394.760000000,197.380000000,2021-01-24,2021-01-24,1,2021-01-15,2021-01-15,7,2,394.760000000,Potential Loyalists
+CUST059,Jessica Gross,christina87@example.com,Petersenshire,2021-01-16,2,528.930000000,264.470000000,2021-01-18,2021-01-24,1,2021-01-30,2021-01-30,7,2,528.930000000,Loyal Customers
+CUST106,William Huerta,lauren10@example.org,West Kristybury,2021-01-16,2,682.570000000,341.290000000,2021-01-22,2021-01-24,1,2021-01-16,2021-01-16,7,2,682.570000000,Loyal Customers
+CUST046,Michelle Wagner,vmerritt@example.com,Greenbury,2021-01-18,2,638.440000000,319.220000000,2021-01-23,2021-01-24,0,,,7,2,638.440000000,Loyal Customers
+CUST216,Nathan Freeman,warrenmary@example.org,Port Adamberg,2021-01-12,2,612.810000000,306.410000000,2021-01-15,2021-01-24,0,,,7,2,612.810000000,Loyal Customers
+CUST184,Jeremy Scott,ilewis@example.com,Derrickshire,2021-01-11,2,345.830000000,172.920000000,2021-01-22,2021-01-24,1,2021-01-28,2021-01-28,7,2,345.830000000,Potential Loyalists
+CUST021,Matthew Fernandez,novaksara@example.org,South Todd,2021-01-10,2,762.200000000,381.100000000,2021-01-11,2021-01-23,1,2021-01-27,2021-01-27,8,2,762.200000000,Loyal Customers
+CUST037,Alexander Wiley,gregory40@example.org,Reedmouth,2021-01-16,2,268.820000000,134.410000000,2021-01-17,2021-01-23,1,2021-01-19,2021-01-19,8,2,268.820000000,Others
+CUST487,Michael Nelson,apena@example.org,Guerrerostad,2021-01-13,2,402.760000000,201.380000000,2021-01-20,2021-01-23,1,2021-01-22,2021-01-22,8,2,402.760000000,Loyal Customers
+CUST476,Roger Norris,larsonkevin@example.net,Millerton,2021-01-18,2,410.660000000,205.330000000,2021-01-19,2021-01-22,1,2021-01-23,2021-01-23,9,2,410.660000000,Loyal Customers
+CUST096,Amanda Kramer,rileyjessica@example.org,Markchester,2021-01-11,2,538.060000000,269.030000000,2021-01-21,2021-01-22,0,,,9,2,538.060000000,Loyal Customers
+CUST034,Cassandra Gutierrez,jillcook@example.com,West Erik,2021-01-20,2,279.350000000,139.680000000,2021-01-20,2021-01-22,1,2021-01-25,2021-01-25,9,2,279.350000000,Others
+CUST232,Christina Rodriguez,adam65@example.net,Brockmouth,2021-01-12,2,622.490000000,311.250000000,2021-01-17,2021-01-21,1,2021-01-19,2021-01-19,10,2,622.490000000,Loyal Customers
+CUST073,Christopher Parker,scott74@example.net,Benderhaven,2021-01-15,2,415.970000000,207.990000000,2021-01-18,2021-01-21,0,,,10,2,415.970000000,Loyal Customers
+CUST324,Ryan Garrison,comptonjeremy@example.com,Schroedermouth,2021-01-12,2,729.400000000,364.700000000,2021-01-17,2021-01-21,1,2021-01-30,2021-01-30,10,2,729.400000000,Loyal Customers
+CUST290,Melissa Williams,eddie35@example.com,Lake Kentburgh,2021-01-16,2,765.440000000,382.720000000,2021-01-16,2021-01-19,0,,,12,2,765.440000000,Loyal Customers
+CUST319,Jay Mcneil,oharris@example.org,Luisland,2021-01-15,2,606.700000000,303.350000000,2021-01-15,2021-01-19,1,2021-01-15,2021-01-15,12,2,606.700000000,Loyal Customers
+CUST066,Beth Williams,tranheidi@example.org,Garciatown,2021-01-17,2,518.390000000,259.200000000,2021-01-18,2021-01-19,1,2021-01-25,2021-01-25,12,2,518.390000000,Loyal Customers
+CUST115,Hayley Hawkins,farmeraudrey@example.com,New Sarahview,2021-01-17,2,597.160000000,298.580000000,2021-01-17,2021-01-18,3,2021-01-15,2021-01-15,13,2,597.160000000,Loyal Customers
+CUST229,Justin Russell,davisangela@example.net,Michelletown,2021-01-12,2,468.860000000,234.430000000,2021-01-12,2021-01-17,0,,,14,2,468.860000000,Loyal Customers
+CUST063,Jared Sanchez,thomas85@example.com,Michaelmouth,2021-01-17,2,466.720000000,233.360000000,2021-01-17,2021-01-17,1,2021-01-26,2021-01-26,14,2,466.720000000,Loyal Customers
+CUST042,Diane Beck,clarence34@example.org,East Andrew,2021-01-13,2,508.230000000,254.120000000,2021-01-14,2021-01-17,0,,,14,2,508.230000000,Loyal Customers
+CUST114,Michelle Schmitt,michael98@example.org,Lake Timothy,2021-01-14,2,622.750000000,311.380000000,2021-01-15,2021-01-16,1,2021-01-26,2021-01-26,15,2,622.750000000,Loyal Customers
+CUST098,Gina Wilson,taylortammy@example.net,Coffeyside,2021-01-11,2,541.140000000,270.570000000,2021-01-11,2021-01-16,1,2021-01-18,2021-01-18,15,2,541.140000000,Loyal Customers
+CUST156,Jacob Edwards,john10@example.net,South April,2021-01-15,2,534.880000000,267.440000000,2021-01-15,2021-01-15,0,,,16,2,534.880000000,Loyal Customers
+CUST326,Kaylee Moore,jenna62@example.net,East Jamesborough,2021-01-12,2,683.730000000,341.870000000,2021-01-14,2021-01-15,1,2021-01-28,2021-01-28,16,2,683.730000000,Loyal Customers
+CUST188,Amanda Huff,vlopez@example.com,North Kennethville,2021-01-12,2,548.200000000,274.100000000,2021-01-13,2021-01-14,0,,,17,2,548.200000000,Loyal Customers
+CUST129,Erica Alvarez,susanhayes@example.com,New Debbieton,2021-01-11,2,231.480000000,115.740000000,2021-01-11,2021-01-13,3,2021-01-28,2021-01-28,18,2,231.480000000,At Risk
+CUST283,Richard Stevenson,stevenvargas@example.com,Lake Rachel,2021-01-10,2,338.320000000,169.160000000,2021-01-10,2021-01-12,1,2021-01-27,2021-01-27,19,2,338.320000000,At Risk
+CUST443,Kara Brown,fwarren@example.org,Christineland,2021-01-21,3,924.300000000,308.100000000,2021-01-29,2021-01-31,0,,,0,3,924.300000000,Champions
+CUST012,Jeffrey Chavez,teresa28@example.org,Meaganhaven,2021-01-28,3,857.450000000,285.820000000,2021-01-28,2021-01-31,0,,,0,3,857.450000000,Champions
+CUST250,Sharon Crane,ytaylor@example.net,Ortizfort,2021-01-31,3,337.840000000,112.610000000,2021-01-31,2021-01-31,0,,,0,3,337.840000000,Potential Loyalists
+CUST327,Danielle Bryant,janet45@example.com,Reidville,2021-01-31,3,713.770000000,237.920000000,2021-01-31,2021-01-31,0,,,0,3,713.770000000,Champions
+CUST411,Steven Greene,davisdonna@example.net,Port Erikachester,2021-01-10,3,338.570000000,112.860000000,2021-01-10,2021-01-31,1,2021-01-27,2021-01-27,0,3,338.570000000,Potential Loyalists
+CUST494,Brianna Fitzpatrick,lonniegrant@example.net,East Lonnieberg,2021-01-29,3,465.740000000,155.250000000,2021-01-29,2021-01-31,2,2021-01-15,2021-01-15,0,3,465.740000000,Loyal Customers
+CUST157,Autumn Hampton,nlewis@example.com,Gonzalezberg,2021-01-24,3,613.290000000,204.430000000,2021-01-28,2021-01-31,0,,,0,3,613.290000000,Champions
+CUST110,Marcus Richards,oscar98@example.com,Wagnerchester,2021-01-30,3,740.940000000,246.980000000,2021-01-30,2021-01-31,1,2021-01-31,2021-01-31,0,3,740.940000000,Champions
+CUST269,Janet Richmond,kylie34@example.net,East Angelaport,2021-01-24,3,826.260000000,275.420000000,2021-01-24,2021-01-31,1,2021-01-23,2021-01-23,0,3,826.260000000,Champions
+CUST422,Jennifer Gonzalez,mclaughlincasey@example.org,Jessicaside,2021-01-13,3,550.150000000,183.380000000,2021-01-18,2021-01-31,1,2021-01-11,2021-01-11,0,3,550.150000000,Loyal Customers
+CUST236,Eddie Schwartz,ichambers@example.net,Johnberg,2021-01-31,3,1003.460000000,334.490000000,2021-01-31,2021-01-31,1,2021-01-21,2021-01-21,0,3,1003.460000000,Champions
+CUST214,Lauren Butler,jameshall@example.net,South Andrea,2021-01-17,3,801.700000000,267.230000000,2021-01-24,2021-01-31,0,,,0,3,801.700000000,Champions
+CUST056,Alexander Collins,tsanders@example.org,New Hannahbury,2021-01-29,3,755.060000000,251.690000000,2021-01-29,2021-01-31,1,2021-01-11,2021-01-11,0,3,755.060000000,Champions
+CUST360,John Allen,brent38@example.net,Powellbury,2021-01-29,3,442.880000000,147.630000000,2021-01-29,2021-01-31,1,2021-01-22,2021-01-22,0,3,442.880000000,Loyal Customers
+CUST257,Miss Anna Estes,rsellers@example.net,Lake Michelle,2021-01-31,3,1029.400000000,343.130000000,2021-01-31,2021-01-31,1,2021-01-19,2021-01-19,0,3,1029.400000000,Champions
+CUST081,Dorothy Thornton,edavenport@example.org,Arnoldfurt,2021-01-12,3,291.500000000,97.170000000,2021-01-13,2021-01-31,1,2021-01-30,2021-01-30,0,3,291.500000000,Potential Loyalists
+CUST329,Melissa Mitchell,kwilliams@example.org,Lake Jeffrey,2021-01-22,3,692.930000000,230.980000000,2021-01-23,2021-01-31,1,2021-01-24,2021-01-24,0,3,692.930000000,Champions
+CUST331,Michelle Hill,dyork@example.com,South Kevin,2021-01-28,3,1001.470000000,333.820000000,2021-01-28,2021-01-31,1,2021-01-16,2021-01-16,0,3,1001.470000000,Champions
+CUST304,Morgan Kim,lbanks@example.net,Jeffreyshire,2021-01-14,3,513.090000000,171.030000000,2021-01-24,2021-01-31,0,,,0,3,513.090000000,Loyal Customers
+CUST146,Heather Jones,jessicafuller@example.net,Dennisstad,2021-01-31,3,1158.910000000,386.300000000,2021-01-31,2021-01-31,2,2021-01-11,2021-01-13,0,3,1158.910000000,Champions
+CUST483,Allison Torres,christina79@example.org,Williamsbury,2021-01-31,3,696.120000000,232.040000000,2021-01-31,2021-01-31,1,2021-01-14,2021-01-14,0,3,696.120000000,Champions
+CUST262,Stephanie Farmer,garciakristen@example.com,North Sarahburgh,2021-01-22,3,865.310000000,288.440000000,2021-01-25,2021-01-31,2,2021-01-19,2021-01-20,0,3,865.310000000,Champions
+CUST141,Thomas Kennedy,katherineharrison@example.net,North Andrewborough,2021-01-24,3,305.360000000,101.790000000,2021-01-24,2021-01-31,2,2021-01-14,2021-01-14,0,3,305.360000000,Potential Loyalists
+CUST301,Rita Waller,gregory01@example.org,New Jeffery,2021-01-27,3,966.240000000,322.080000000,2021-01-27,2021-01-31,2,2021-01-13,2021-01-13,0,3,966.240000000,Champions
+CUST376,Amy Manning,christinenorman@example.com,Lake Janet,2021-01-27,3,1132.940000000,377.650000000,2021-01-27,2021-01-31,2,2021-01-14,2021-01-14,0,3,1132.940000000,Champions
+CUST121,Joseph Hall,charles06@example.org,Morsemouth,2021-01-28,3,1057.590000000,352.530000000,2021-01-30,2021-01-31,0,,,0,3,1057.590000000,Champions
+CUST437,Karen Soto,qgarner@example.com,Annview,2021-01-21,3,745.310000000,248.440000000,2021-01-26,2021-01-31,1,2021-01-22,2021-01-22,0,3,745.310000000,Champions
+CUST496,Cody Farmer,catherine93@example.net,East Grace,2021-01-21,3,815.780000000,271.930000000,2021-01-26,2021-01-31,1,2021-01-14,2021-01-14,0,3,815.780000000,Champions
+CUST334,Lindsay Guerrero,jenniferrios@example.com,Rebeccafurt,2021-01-29,3,384.010000000,128.000000000,2021-01-29,2021-01-31,0,,,0,3,384.010000000,Potential Loyalists
+CUST203,Molly Rodriguez,bmendez@example.org,North Craig,2021-01-27,3,745.880000000,248.630000000,2021-01-29,2021-01-31,1,2021-01-31,2021-01-31,0,3,745.880000000,Champions
+CUST079,Olivia Harris,sarakim@example.net,Martinezbury,2021-01-31,3,439.540000000,146.510000000,2021-01-31,2021-01-31,1,2021-01-14,2021-01-14,0,3,439.540000000,Loyal Customers
+CUST024,Kathryn Farrell,brianromero@example.org,New Carlosbury,2021-01-30,3,693.690000000,231.230000000,2021-01-30,2021-01-31,1,2021-01-29,2021-01-29,0,3,693.690000000,Champions
+CUST088,Shannon James,courtney78@example.org,East Crystalport,2021-01-24,3,866.300000000,288.770000000,2021-01-26,2021-01-31,1,2021-01-17,2021-01-17,0,3,866.300000000,Champions
+CUST197,Katherine Nolan,dstokes@example.org,Bryantton,2021-01-15,3,782.880000000,260.960000000,2021-01-21,2021-01-31,1,2021-01-13,2021-01-13,0,3,782.880000000,Champions
+CUST168,Gerald Thomas,jessica56@example.org,Zacharyville,2021-01-29,3,467.410000000,155.800000000,2021-01-29,2021-01-31,2,2021-01-19,2021-01-29,0,3,467.410000000,Loyal Customers
+CUST400,Miss Nicole Taylor,haroldfry@example.net,Lake Jessica,2021-01-30,3,813.530000000,271.180000000,2021-01-30,2021-01-30,1,2021-01-15,2021-01-15,1,3,813.530000000,Champions
+CUST238,Robin Wheeler,rodriguezjohn@example.net,Gabrielton,2021-01-16,3,733.820000000,244.610000000,2021-01-17,2021-01-30,1,2021-01-12,2021-01-12,1,3,733.820000000,Champions
+CUST244,Lori Lopez,vfoster@example.net,South Brittany,2021-01-17,3,106.840000000,35.610000000,2021-01-21,2021-01-30,1,2021-01-10,2021-01-10,1,3,106.840000000,Others
+CUST391,Jennifer Kelley,torreskaitlin@example.net,Jasonhaven,2021-01-27,3,1168.050000000,389.350000000,2021-01-28,2021-01-30,1,2021-01-28,2021-01-28,1,3,1168.050000000,Champions
+CUST124,Richard Jones,schmidtjames@example.com,Jessicaberg,2021-01-17,3,535.360000000,178.450000000,2021-01-20,2021-01-30,1,2021-01-23,2021-01-23,1,3,535.360000000,Loyal Customers
+CUST239,Maria Lucas,tammy61@example.org,West Jeffreyhaven,2021-01-27,3,702.920000000,234.310000000,2021-01-27,2021-01-30,1,2021-01-21,2021-01-21,1,3,702.920000000,Champions
+CUST212,Patricia James,kyle58@example.com,Garciafort,2021-01-24,3,846.780000000,282.260000000,2021-01-29,2021-01-30,0,,,1,3,846.780000000,Champions
+CUST245,Michael Harris,raylauren@example.net,West Mark,2021-01-25,3,736.760000000,245.590000000,2021-01-26,2021-01-30,2,2021-01-23,2021-01-30,1,3,736.760000000,Champions
+CUST292,Rodney Watson,aguilarjonathan@example.org,North Jamesmouth,2021-01-11,3,593.400000000,197.800000000,2021-01-22,2021-01-30,7,2021-01-21,2021-01-31,1,3,593.400000000,Loyal Customers
+CUST159,Donna Evans,jenniferho@example.net,Port Michael,2021-01-18,3,749.710000000,249.900000000,2021-01-28,2021-01-30,3,2021-01-15,2021-01-16,1,3,749.710000000,Champions
+CUST495,Pamela Beard,tali@example.com,Edwinborough,2021-01-23,3,559.470000000,186.490000000,2021-01-27,2021-01-30,2,2021-01-26,2021-01-26,1,3,559.470000000,Loyal Customers
+CUST448,John Smith,earroyo@example.com,Port Russellport,2021-01-17,3,596.350000000,198.780000000,2021-01-17,2021-01-29,2,2021-01-13,2021-01-13,2,3,596.350000000,Loyal Customers
+CUST169,John Adams,donaldwilliams@example.com,Wrightburgh,2021-01-16,3,932.520000000,310.840000000,2021-01-19,2021-01-29,1,2021-01-24,2021-01-24,2,3,932.520000000,Champions
+CUST444,Stacey Parker,joanramos@example.org,New Mary,2021-01-27,3,694.580000000,231.530000000,2021-01-28,2021-01-29,0,,,2,3,694.580000000,Champions
+CUST128,Vanessa Davis,jford@example.net,South Reginashire,2021-01-12,3,603.020000000,201.010000000,2021-01-15,2021-01-29,0,,,2,3,603.020000000,Champions
+CUST499,Troy Gonzales,dwatts@example.org,Sullivanton,2021-01-29,3,507.310000000,169.100000000,2021-01-29,2021-01-29,1,2021-01-20,2021-01-20,2,3,507.310000000,Loyal Customers
+CUST471,Mrs. Heather Edwards DVM,megan66@example.net,Charleneshire,2021-01-10,3,1001.440000000,333.810000000,2021-01-11,2021-01-29,1,2021-01-18,2021-01-18,2,3,1001.440000000,Champions
+CUST402,John Gibson,williamsdeborah@example.org,Maryview,2021-01-26,3,828.820000000,276.270000000,2021-01-26,2021-01-29,2,2021-01-12,2021-01-13,2,3,828.820000000,Champions
+CUST396,Raymond Tucker,thompsoncatherine@example.com,New James,2021-01-16,3,353.930000000,117.980000000,2021-01-26,2021-01-29,1,2021-01-24,2021-01-24,2,3,353.930000000,Potential Loyalists
+CUST104,Donald Donaldson,ndavis@example.net,North Kristinbury,2021-01-28,3,863.140000000,287.710000000,2021-01-29,2021-01-29,1,2021-01-11,2021-01-11,2,3,863.140000000,Champions
+CUST253,Nicole Wolf,bpayne@example.org,West Nancy,2021-01-23,3,267.590000000,89.200000000,2021-01-24,2021-01-29,2,2021-01-13,2021-01-17,2,3,267.590000000,Potential Loyalists
+CUST401,Amanda Juarez,bryanwood@example.org,New Rebecca,2021-01-18,3,501.890000000,167.300000000,2021-01-18,2021-01-29,1,2021-01-27,2021-01-27,2,3,501.890000000,Loyal Customers
+CUST087,Matthew Moore,qharrington@example.com,Santosmouth,2021-01-15,3,832.750000000,277.580000000,2021-01-19,2021-01-28,1,2021-01-31,2021-01-31,3,3,832.750000000,Champions
+CUST023,Katelyn Lee,tanyariley@example.net,Lake Leeton,2021-01-16,3,1053.360000000,351.120000000,2021-01-23,2021-01-28,1,2021-01-25,2021-01-25,3,3,1053.360000000,Champions
+CUST005,Michele Williams,kendragalloway@example.org,South Joshuastad,2021-01-17,3,697.200000000,232.400000000,2021-01-20,2021-01-28,0,,,3,3,697.200000000,Champions
+CUST130,Jeffrey Gonzales,michaelhardin@example.com,Schroederton,2021-01-13,3,757.900000000,252.630000000,2021-01-15,2021-01-28,0,,,3,3,757.900000000,Champions
+CUST413,Cesar Woods,reneemiller@example.net,Scotttown,2021-01-14,3,1099.310000000,366.440000000,2021-01-17,2021-01-28,1,2021-01-19,2021-01-19,3,3,1099.310000000,Champions
+CUST069,Kyle Montgomery,chayes@example.com,Torreston,2021-01-18,3,1159.480000000,386.490000000,2021-01-22,2021-01-28,0,,,3,3,1159.480000000,Champions
+CUST294,James Simmons MD,joshuagriffin@example.org,New Christinebury,2021-01-22,3,569.040000000,189.680000000,2021-01-23,2021-01-27,1,2021-01-18,2021-01-18,4,3,569.040000000,Loyal Customers
+CUST390,Rebecca Daniel,susan08@example.net,North Bobby,2021-01-13,3,757.450000000,252.480000000,2021-01-15,2021-01-27,0,,,4,3,757.450000000,Champions
+CUST065,Dr. William Warren,tina34@example.org,Harrytown,2021-01-12,3,787.660000000,262.550000000,2021-01-13,2021-01-27,1,2021-01-12,2021-01-12,4,3,787.660000000,Champions
+CUST458,Jennifer Sanchez,perkinshannah@example.net,West Kelli,2021-01-18,3,707.000000000,235.670000000,2021-01-25,2021-01-27,2,2021-01-28,2021-01-28,4,3,707.000000000,Champions
+CUST138,Amy Castillo,angela18@example.org,Christopherburgh,2021-01-22,3,941.130000000,313.710000000,2021-01-24,2021-01-27,1,2021-01-29,2021-01-29,4,3,941.130000000,Champions
+CUST306,Ashley Crawford,julie35@example.com,Lake Nicole,2021-01-19,3,862.920000000,287.640000000,2021-01-20,2021-01-27,2,2021-01-20,2021-01-21,4,3,862.920000000,Champions
+CUST468,Deborah Williams,davenportchristian@example.org,North Jessicaside,2021-01-19,3,835.880000000,278.630000000,2021-01-21,2021-01-26,1,2021-01-30,2021-01-30,5,3,835.880000000,Champions
+CUST180,Kaitlyn Charles,thorntonapril@example.net,Whitneyfort,2021-01-13,3,557.800000000,185.930000000,2021-01-17,2021-01-26,3,2021-01-12,2021-01-27,5,3,557.800000000,Loyal Customers
+CUST060,Samuel Rivas,ramirezshannon@example.com,Rogersfort,2021-01-12,3,854.150000000,284.720000000,2021-01-16,2021-01-26,0,,,5,3,854.150000000,Champions
+CUST313,Brandon Colon,bgonzalez@example.org,Lake Kelly,2021-01-11,3,665.680000000,221.890000000,2021-01-13,2021-01-26,1,2021-01-18,2021-01-18,5,3,665.680000000,Champions
+CUST296,Kelly Mccoy,mayokimberly@example.com,Stephensfort,2021-01-22,3,1038.540000000,346.180000000,2021-01-22,2021-01-25,1,2021-01-28,2021-01-28,6,3,1038.540000000,Champions
+CUST078,April Booth,mgutierrez@example.net,Cindyfort,2021-01-18,3,833.140000000,277.710000000,2021-01-18,2021-01-25,0,,,6,3,833.140000000,Champions
+CUST373,James Brown,gonzalezkaren@example.org,Francesberg,2021-01-19,3,534.350000000,178.120000000,2021-01-21,2021-01-25,1,2021-01-14,2021-01-14,6,3,534.350000000,Loyal Customers
+CUST426,Richard Robinson,laurengutierrez@example.com,Lake Marilynbury,2021-01-11,3,544.940000000,181.650000000,2021-01-20,2021-01-25,0,,,6,3,544.940000000,Loyal Customers
+CUST103,Teresa Ramirez,jeff73@example.com,Lake Michaelstad,2021-01-16,3,736.020000000,245.340000000,2021-01-16,2021-01-24,1,2021-01-20,2021-01-20,7,3,736.020000000,Champions
+CUST152,Garrett Phillips,bmorrison@example.org,Bellton,2021-01-20,3,597.520000000,199.170000000,2021-01-22,2021-01-23,0,,,8,3,597.520000000,Loyal Customers
+CUST330,Matthew Palmer,wellsdavid@example.org,East Johnnyport,2021-01-13,3,973.380000000,324.460000000,2021-01-20,2021-01-23,1,2021-01-13,2021-01-13,8,3,973.380000000,Loyal Customers
+CUST275,Kevin Hines,collinssamuel@example.org,East Christopherchester,2021-01-17,3,1003.110000000,334.370000000,2021-01-17,2021-01-22,2,2021-01-19,2021-01-20,9,3,1003.110000000,Loyal Customers
+CUST392,Clinton Jensen,james29@example.org,Newmanland,2021-01-14,3,899.760000000,299.920000000,2021-01-19,2021-01-21,1,2021-01-12,2021-01-12,10,3,899.760000000,Loyal Customers
+CUST415,Matthew King,ncunningham@example.com,Fischerchester,2021-01-18,3,699.800000000,233.270000000,2021-01-18,2021-01-20,1,2021-01-22,2021-01-22,11,3,699.800000000,Loyal Customers
+CUST076,Jessica Olsen DVM,vbailey@example.com,Port Eugenechester,2021-01-16,3,762.760000000,254.250000000,2021-01-16,2021-01-18,1,2021-01-25,2021-01-25,13,3,762.760000000,Loyal Customers
+CUST220,Jared Cunningham,kevinclayton@example.org,North Richardfurt,2021-01-27,4,976.210000000,244.050000000,2021-01-27,2021-01-31,7,2021-01-12,2021-01-14,0,4,976.210000000,Champions
+CUST136,Rachel Young,kylestokes@example.com,West Erika,2021-01-29,4,567.800000000,141.950000000,2021-01-30,2021-01-31,1,2021-01-12,2021-01-12,0,4,567.800000000,Loyal Customers
+CUST149,Robert Kennedy,mullinsjames@example.com,Port Dianaview,2021-01-27,4,529.790000000,132.450000000,2021-01-27,2021-01-31,2,2021-01-22,2021-01-24,0,4,529.790000000,Loyal Customers
+CUST185,Anthony Stein,danawilliams@example.com,Jenniferville,2021-01-17,4,943.090000000,235.770000000,2021-01-17,2021-01-31,0,,,0,4,943.090000000,Champions
+CUST226,Erin Walters,whenry@example.net,Reynoldsshire,2021-01-30,4,609.870000000,152.470000000,2021-01-30,2021-01-31,1,2021-01-12,2021-01-12,0,4,609.870000000,Champions
+CUST173,Chloe Tran,hughesshannon@example.net,Marciaville,2021-01-27,4,720.490000000,180.120000000,2021-01-29,2021-01-31,1,2021-01-18,2021-01-18,0,4,720.490000000,Champions
+CUST015,Carmen Rose,ibrandt@example.net,Lake Larry,2021-01-10,4,1078.030000000,269.510000000,2021-01-15,2021-01-31,1,2021-01-14,2021-01-14,0,4,1078.030000000,Champions
+CUST120,Mrs. Christine Dougherty,kathrynroberts@example.org,South Julieburgh,2021-01-23,4,819.690000000,204.920000000,2021-01-24,2021-01-31,1,2021-01-25,2021-01-25,0,4,819.690000000,Champions
+CUST486,Kimberly Dean,heatherbarnett@example.com,West Georgeport,2021-01-10,4,974.810000000,243.700000000,2021-01-16,2021-01-31,1,2021-01-28,2021-01-28,0,4,974.810000000,Champions
+CUST248,Clayton Steele,ibarnes@example.net,Hendersonfort,2021-01-13,4,882.780000000,220.700000000,2021-01-16,2021-01-31,6,2021-01-15,2021-01-17,0,4,882.780000000,Champions
+CUST340,Susan Ellis,michelle21@example.com,Crystalburgh,2021-01-28,4,1058.650000000,264.660000000,2021-01-29,2021-01-31,1,2021-01-24,2021-01-24,0,4,1058.650000000,Champions
+CUST134,Ralph Lee,ericphillips@example.org,Lake Matthewberg,2021-01-31,4,290.190000000,72.550000000,2021-01-31,2021-01-31,1,2021-01-17,2021-01-17,0,4,290.190000000,Potential Loyalists
+CUST020,Connor West,dwhite@example.org,South Lindseyside,2021-01-29,4,1302.930000000,325.730000000,2021-01-29,2021-01-31,2,2021-01-28,2021-01-28,0,4,1302.930000000,Champions
+CUST231,Charles Jackson,robert71@example.com,Sherylfort,2021-01-20,4,933.560000000,233.390000000,2021-01-24,2021-01-31,1,2021-01-18,2021-01-18,0,4,933.560000000,Champions
+CUST207,Emma Butler,kevinwhite@example.net,Allenbury,2021-01-31,4,1205.760000000,301.440000000,2021-01-31,2021-01-31,1,2021-01-17,2021-01-17,0,4,1205.760000000,Champions
+CUST234,Tracy Carter,yfaulkner@example.org,Nicholasfurt,2021-01-17,4,856.360000000,214.090000000,2021-01-19,2021-01-30,2,2021-01-28,2021-01-28,1,4,856.360000000,Champions
+CUST332,Loretta Silva,hunteileen@example.com,Kennethville,2021-01-17,4,1057.760000000,264.440000000,2021-01-18,2021-01-30,1,2021-01-11,2021-01-11,1,4,1057.760000000,Champions
+CUST479,Nicole Johnston,walkerkeith@example.com,East Matthew,2021-01-21,4,1325.190000000,331.300000000,2021-01-21,2021-01-30,1,2021-01-26,2021-01-26,1,4,1325.190000000,Champions
+CUST191,Jennifer Patterson,christopher12@example.org,Morrisbury,2021-01-27,4,984.620000000,246.160000000,2021-01-29,2021-01-30,1,2021-01-27,2021-01-27,1,4,984.620000000,Champions
+CUST032,Juan Jordan,parkerrachel@example.org,Jasonbury,2021-01-15,4,1023.340000000,255.840000000,2021-01-18,2021-01-30,1,2021-01-22,2021-01-22,1,4,1023.340000000,Champions
+CUST356,Dr. Ashley Pruitt,rpham@example.com,New Noah,2021-01-20,4,1244.120000000,311.030000000,2021-01-22,2021-01-30,2,2021-01-22,2021-01-22,1,4,1244.120000000,Champions
+CUST048,Steven Miller,jessebenson@example.net,North Robert,2021-01-24,4,442.010000000,110.500000000,2021-01-27,2021-01-30,1,2021-01-27,2021-01-27,1,4,442.010000000,Loyal Customers
+CUST393,Austin Garcia,wlynn@example.org,North Justin,2021-01-18,4,969.590000000,242.400000000,2021-01-23,2021-01-30,1,2021-01-19,2021-01-19,1,4,969.590000000,Champions
+CUST383,Joshua Campbell,willie87@example.com,West Rachelborough,2021-01-27,4,1017.460000000,254.370000000,2021-01-27,2021-01-30,1,2021-01-11,2021-01-11,1,4,1017.460000000,Champions
+CUST260,Aaron Schroeder,simonstephen@example.net,Melissaside,2021-01-13,4,1354.570000000,338.640000000,2021-01-22,2021-01-30,1,2021-01-17,2021-01-17,1,4,1354.570000000,Champions
+CUST137,Jessica Hammond,ashaw@example.org,Port Cassandra,2021-01-12,4,629.470000000,157.370000000,2021-01-12,2021-01-29,1,2021-01-23,2021-01-23,2,4,629.470000000,Champions
+CUST170,Taylor Griffith,kathrynjimenez@example.net,Jimenezport,2021-01-14,4,790.940000000,197.740000000,2021-01-17,2021-01-29,1,2021-01-12,2021-01-12,2,4,790.940000000,Champions
+CUST403,Laura Bennett,pdiaz@example.org,Nicholasbury,2021-01-25,4,729.670000000,182.420000000,2021-01-27,2021-01-29,1,2021-01-17,2021-01-17,2,4,729.670000000,Champions
+CUST370,Michael Goodman,megan85@example.net,East Jason,2021-01-12,4,878.730000000,219.680000000,2021-01-16,2021-01-29,0,,,2,4,878.730000000,Champions
+CUST122,Laura Mckinney,zroberts@example.org,Georgemouth,2021-01-22,4,765.800000000,191.450000000,2021-01-26,2021-01-29,1,2021-01-11,2021-01-11,2,4,765.800000000,Champions
+CUST072,David Baker,ronaldstephens@example.net,West Margaret,2021-01-21,4,1565.400000000,391.350000000,2021-01-21,2021-01-29,1,2021-01-16,2021-01-16,2,4,1565.400000000,Champions
+CUST246,Dennis Huffman,candice96@example.net,West Michaelmouth,2021-01-23,4,445.660000000,111.420000000,2021-01-23,2021-01-28,0,,,3,4,445.660000000,Loyal Customers
+CUST086,Vincent Rivera,sawyerscott@example.net,Smithberg,2021-01-17,4,643.250000000,160.810000000,2021-01-22,2021-01-28,1,2021-01-24,2021-01-24,3,4,643.250000000,Champions
+CUST225,Melissa Miller,brian63@example.org,Cassiefurt,2021-01-12,4,1039.230000000,259.810000000,2021-01-15,2021-01-28,1,2021-01-25,2021-01-25,3,4,1039.230000000,Champions
+CUST371,Melissa Morse,tinasantos@example.org,Jenniferstad,2021-01-17,4,991.930000000,247.980000000,2021-01-19,2021-01-28,0,,,3,4,991.930000000,Champions
+CUST187,Matthew Velez,pearsonjesse@example.net,East Robertburgh,2021-01-12,4,1252.440000000,313.110000000,2021-01-15,2021-01-28,1,2021-01-11,2021-01-11,3,4,1252.440000000,Champions
+CUST027,Angel Lewis MD,nicole35@example.com,South Martha,2021-01-17,4,961.390000000,240.350000000,2021-01-19,2021-01-27,0,,,4,4,961.390000000,Champions
+CUST397,Lori Luna,atkinsoncrystal@example.net,Hammondborough,2021-01-20,4,811.920000000,202.980000000,2021-01-21,2021-01-27,0,,,4,4,811.920000000,Champions
+CUST038,William Wilson,jonathanfletcher@example.org,West Ryan,2021-01-20,4,958.940000000,239.740000000,2021-01-20,2021-01-27,0,,,4,4,958.940000000,Champions
+CUST345,Stephen Cowan,wendy75@example.org,Port Richard,2021-01-16,4,1218.280000000,304.570000000,2021-01-17,2021-01-25,1,2021-01-14,2021-01-14,6,4,1218.280000000,Champions
+CUST193,Bryan Parker,tparks@example.com,Lake Sabrinaport,2021-01-14,4,1375.830000000,343.960000000,2021-01-16,2021-01-22,2,2021-01-24,2021-01-26,9,4,1375.830000000,Loyal Customers
+CUST009,Justin Baker,zhurst@example.com,East William,2021-01-31,5,1324.390000000,264.880000000,2021-01-31,2021-01-31,1,2021-01-20,2021-01-20,0,5,1324.390000000,Champions
+CUST472,Jaime Pierce,michael77@example.com,Lake Austinport,2021-01-31,5,1349.030000000,269.810000000,2021-01-31,2021-01-31,1,2021-01-28,2021-01-28,0,5,1349.030000000,Champions
+CUST189,Frances Gibson,ismall@example.net,Nelsonville,2021-01-25,5,1057.460000000,211.490000000,2021-01-25,2021-01-31,0,,,0,5,1057.460000000,Champions
+CUST281,Nathan Nelson,duncandavid@example.net,East Jeffreyhaven,2021-01-30,5,1078.350000000,215.670000000,2021-01-30,2021-01-31,1,2021-01-27,2021-01-27,0,5,1078.350000000,Champions
+CUST441,Matthew Page,cnelson@example.com,Gutierrezburgh,2021-01-31,5,1066.520000000,213.300000000,2021-01-31,2021-01-31,1,2021-01-17,2021-01-17,0,5,1066.520000000,Champions
+CUST070,Natalie Meza,colleenbaker@example.org,East Glenn,2021-01-24,5,1164.070000000,232.810000000,2021-01-26,2021-01-31,1,2021-01-28,2021-01-28,0,5,1164.070000000,Champions
+CUST071,Aaron Hayes,ocarter@example.com,Jacquelinemouth,2021-01-30,5,849.990000000,170.000000000,2021-01-30,2021-01-31,2,2021-01-13,2021-01-13,0,5,849.990000000,Champions
+CUST339,Michael Moreno,jbrown@example.org,West Robert,2021-01-31,5,575.440000000,115.090000000,2021-01-31,2021-01-31,1,2021-01-31,2021-01-31,0,5,575.440000000,Loyal Customers
+CUST352,Maria Bryant,joseph01@example.org,Port Kellymouth,2021-01-31,5,1056.750000000,211.350000000,2021-01-31,2021-01-31,1,2021-01-22,2021-01-22,0,5,1056.750000000,Champions
+CUST293,Anna Boone,david70@example.org,Underwoodfurt,2021-01-15,5,563.400000000,112.680000000,2021-01-26,2021-01-31,0,,,0,5,563.400000000,Loyal Customers
+CUST047,Destiny Strickland,rsims@example.com,Lake Justinview,2021-01-11,5,1267.950000000,253.590000000,2021-01-11,2021-01-31,1,2021-01-15,2021-01-15,0,5,1267.950000000,Champions
+CUST284,Danielle Smith,ijohnson@example.com,West Aaronfurt,2021-01-12,5,1100.820000000,220.160000000,2021-01-12,2021-01-31,1,2021-01-14,2021-01-14,0,5,1100.820000000,Champions
+CUST258,Michael Poole,kburns@example.net,Courtneyfurt,2021-01-30,5,1052.050000000,210.410000000,2021-01-30,2021-01-31,1,2021-01-16,2021-01-16,0,5,1052.050000000,Champions
+CUST067,Julie Alexander,tammyking@example.com,Port Cameronfort,2021-01-13,5,981.170000000,196.230000000,2021-01-15,2021-01-30,1,2021-01-21,2021-01-21,1,5,981.170000000,Champions
+CUST175,Micheal Brock,ghernandez@example.org,Sarahmouth,2021-01-10,5,1695.640000000,339.130000000,2021-01-15,2021-01-29,2,2021-01-29,2021-01-29,2,5,1695.640000000,Champions
+CUST285,Monica Garcia,robertwoodward@example.org,Christopherbury,2021-01-17,5,815.150000000,163.030000000,2021-01-17,2021-01-29,1,2021-01-15,2021-01-15,2,5,815.150000000,Champions
+CUST017,Mark Perez,heathchad@example.org,Elizabethborough,2021-01-16,5,823.180000000,164.640000000,2021-01-19,2021-01-29,2,2021-01-21,2021-01-21,2,5,823.180000000,Champions
+CUST195,Nicole Pham,kathleenbecker@example.net,New Seanstad,2021-01-25,5,1390.370000000,278.070000000,2021-01-27,2021-01-29,1,2021-01-20,2021-01-20,2,5,1390.370000000,Champions
+CUST053,Trevor Fisher,ruizkaitlyn@example.org,Jeffreyland,2021-01-27,5,1304.260000000,260.850000000,2021-01-27,2021-01-29,4,2021-01-11,2021-01-28,2,5,1304.260000000,Champions
+CUST161,Stephen Jones,ukey@example.com,Hammondshire,2021-01-15,5,579.680000000,115.940000000,2021-01-16,2021-01-28,0,,,3,5,579.680000000,Loyal Customers
+CUST436,Emily Tucker,anna90@example.com,Lake Frankborough,2021-01-11,5,1356.220000000,271.240000000,2021-01-13,2021-01-27,1,2021-01-30,2021-01-30,4,5,1356.220000000,Champions
+CUST204,Kyle Warner,sanchezbradley@example.com,New Jeff,2021-01-16,5,923.490000000,184.700000000,2021-01-17,2021-01-26,1,2021-01-29,2021-01-29,5,5,923.490000000,Champions
+CUST177,Alan Rivera,whitneybrandy@example.net,New Thomasshire,2021-01-20,5,1813.730000000,362.750000000,2021-01-22,2021-01-26,1,2021-01-17,2021-01-17,5,5,1813.730000000,Champions
+CUST272,Dr. Bonnie Valencia,rdiaz@example.org,Bestland,2021-01-15,6,1528.550000000,254.760000000,2021-01-24,2021-01-31,1,2021-01-28,2021-01-28,0,6,1528.550000000,Champions
+CUST153,Susan Mendez,yhill@example.org,Lake Danastad,2021-01-13,6,1467.900000000,244.650000000,2021-01-16,2021-01-31,1,2021-01-28,2021-01-28,0,6,1467.900000000,Champions
+CUST116,Donald Farmer,michael22@example.net,Jonestown,2021-01-27,7,1768.360000000,252.620000000,2021-01-27,2021-01-31,1,2021-01-30,2021-01-30,0,7,1768.360000000,Champions
+CUST213,Erica Harris,robert93@example.net,North Jose,2021-01-13,7,1169.670000000,167.100000000,2021-01-14,2021-01-27,3,2021-01-20,2021-01-25,4,7,1169.670000000,Champions

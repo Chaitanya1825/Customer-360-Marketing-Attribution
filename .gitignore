@@ -1,0 +1,56 @@
+# =====================================================================
+# Customer 360 & Marketing Attribution Platform - .gitignore
+# =====================================================================
+
+# --- Python & Virtual Environments ---
+venv/
+env/
+ENV/
+*.venv/
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+
+# --- dbt Build Artifacts, Compiled SQL, & Logs ---
+dbt_project/target/
+dbt_project/dbt_packages/
+dbt_project/logs/
+dbt_project/.user.yml
+*.log
+
+# --- Streamlit Local State & Cache ---
+.streamlit/secrets.toml
+.streamlit/.cache/
+
+# --- Tableau Runtime, Recovery & Logs ---
+hyperd.log
+*.hyper.log
+~*.twb*
+*.twbr
+
+# --- Temporary Scratch & Debugging Scripts ---
+scratch/
+
+# --- Operating System & IDE Caches ---
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# --- Cloud Credentials & Secret Safeguards ---
+*.pem
+*.key
+*.p12
+.env
+.env.*
+service_account*.json
+credentials*.json
+

@@ -1,0 +1,28 @@
+# =====================================================================
+# dbt Profile Configuration Example
+# ---------------------------------------------------------------------
+# Place this file in your ~/.dbt/ directory or run dbt with:
+#   dbt build --profiles-dir dbt_project
+#
+# Authentication:
+#   Uses Google Cloud Application Default Credentials (OAuth).
+#   To authenticate: run `gcloud auth application-default login`
+#
+# Environment Variables (Optional):
+#   GCP_PROJECT_ID: Your Google Cloud Project ID (default: customer360-analytics-513415)
+#   GCP_DATASET_ID: Your target BigQuery analytics dataset (default: analytics)
+#   GCP_LOCATION: BigQuery data location (default: US)
+# =====================================================================
+
+customer360_profile:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: "{{ env_var('GCP_PROJECT_ID', 'your-gcp-project-id') }}"
+      dataset: "{{ env_var('GCP_DATASET_ID', 'analytics') }}"
+      threads: 4
+      timeout_seconds: 300
+      location: "{{ env_var('GCP_LOCATION', 'US') }}"
+

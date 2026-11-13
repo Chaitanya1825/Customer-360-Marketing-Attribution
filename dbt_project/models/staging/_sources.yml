@@ -1,0 +1,59 @@
+version: 2
+
+sources:
+  - name: raw_data
+    description: "Raw ingested datasets stored in BigQuery raw_data dataset."
+    database: customer360-analytics-513415
+    schema: raw_data
+    tables:
+      - name: customers
+        description: "Raw customer registration and profile details from CRM."
+        columns:
+          - name: customer_id
+            description: "Primary key for customer."
+          - name: name
+          - name: email
+          - name: city
+          - name: signup_date
+
+      - name: orders
+        description: "Raw customer transaction purchase orders."
+        columns:
+          - name: order_id
+            description: "Primary key for purchase order."
+          - name: customer_id
+            description: "Foreign key referencing customers.customer_id."
+          - name: order_date
+          - name: order_amount
+          - name: product_category
+
+      - name: ad_spend
+        description: "Raw daily advertising spend and engagement across paid channels."
+        columns:
+          - name: campaign_id
+          - name: campaign_name
+          - name: channel
+          - name: date
+          - name: spend
+          - name: clicks
+          - name: impressions
+
+      - name: ga4_sessions
+        description: "Raw web analytics session data extracted from Google Analytics 4."
+        columns:
+          - name: user_pseudo_id
+          - name: ga_session_id
+          - name: session_start_time
+          - name: event_count
+          - name: traffic_source
+          - name: traffic_medium
+          - name: campaign_name
+          - name: purchase_revenue
+
+      - name: identity_mapping
+        description: "Identity resolution bridge table linking GA4 users to CRM customers."
+        columns:
+          - name: user_pseudo_id
+          - name: customer_id
+          - name: mapping_type
+

@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: fct_campaign_performance
+    description: "Marketing campaign and attribution performance mart separating Paid Ad Spend from Web Acquisition Sources."
+    columns:
+      - name: reporting_section
+        description: "Discriminator indicating 'paid_campaign' or 'attributed_traffic_source'."
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - 'paid_campaign'
+                  - 'attributed_traffic_source'
+

@@ -1,0 +1,11 @@
+customer360_profile:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: "{{ env_var('GCP_PROJECT_ID', 'customer360-analytics-513415') }}"
+      dataset: "{{ env_var('GCP_DATASET_ID', 'analytics') }}"
+      threads: 4
+      timeout_seconds: 300
+      location: "{{ env_var('GCP_LOCATION', 'US') }}"

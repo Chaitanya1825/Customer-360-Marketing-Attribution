@@ -1,0 +1,49 @@
+version: 2
+
+models:
+  - name: customer_360
+    description: "Unified Customer 360 view with RFM metrics and lifecycle segmentation."
+    columns:
+      - name: customer_id
+        description: "Primary key for Customer 360 record."
+        tests:
+          - unique
+          - not_null
+
+      - name: name
+        tests:
+          - not_null
+
+      - name: email
+        tests:
+          - not_null
+
+      - name: total_orders
+        description: "Total orders placed by customer."
+        tests:
+          - not_null
+
+      - name: total_revenue
+        description: "Lifetime revenue (LTV) from customer."
+        tests:
+          - not_null
+
+      - name: total_sessions
+        description: "Total web visits from GA4 sessions."
+        tests:
+          - not_null
+
+      - name: customer_segment
+        description: "RFM-based customer segmentation tier."
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - 'Champions'
+                  - 'Loyal Customers'
+                  - 'Potential Loyalists'
+                  - 'At Risk'
+                  - 'New Customers'
+                  - 'Others'
+

@@ -1,0 +1,46 @@
+version: 2
+
+models:
+  - name: int_customer_sessions
+    description: "Intermediate model joining GA4 web sessions to CRM customers via simulated identity resolution."
+    tests:
+      - unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - customer_id
+              - ga_session_id
+    columns:
+      - name: customer_id
+        description: "Resolved CRM Customer ID."
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_customers')
+                field: customer_id
+
+      - name: user_pseudo_id
+        description: "Anonymous GA4 device/client ID."
+        tests:
+          - not_null
+
+      - name: ga_session_id
+        description: "GA4 session timestamp ID."
+        tests:
+          - not_null
+
+      - name: session_start_time
+        description: "Timestamp of session start."
+        tests:
+          - not_null
+
+      - name: session_sequence_number
+        description: "Chronological sequence index of sessions per customer (1 = First Touch)."
+        tests:
+          - not_null
+
+      - name: mapping_type
+        description: "Type of resolution (e.g. simulated)."
+        tests:
+          - not_null
+

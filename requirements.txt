@@ -1,0 +1,10 @@
+pandas
+numpy
+faker
+streamlit
+plotly
+google-cloud-bigquery
+dbt-bigquery
+tableauhyperapi
+db-dtypes
+pyarrow

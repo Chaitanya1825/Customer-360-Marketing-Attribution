@@ -1,0 +1,29 @@
+name: 'customer360_analytics'
+version: '1.0.0'
+config-version: 2
+
+# Profile to use from profiles.yml
+profile: 'customer360_profile'
+
+# Model paths configuration
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+# Staging models materialized as views by default
+models:
+  customer360_analytics:
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: view
+    marts:
+      +materialized: table
+

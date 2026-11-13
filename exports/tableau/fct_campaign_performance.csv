@@ -1,0 +1,17 @@
+reporting_section,campaign_id,campaign_name,marketing_channel,traffic_source,traffic_medium,total_spend,total_clicks,total_impressions,cost_per_click,cost_per_1000_impressions,first_touch_revenue,last_touch_revenue,linear_attributed_revenue,time_decay_attributed_revenue,attributed_order_count
+attributed_traffic_source,,,,Direct,(none),,,,,,91956.77,91956.77,91956.77,91956.77,381
+attributed_traffic_source,,,,google,organic,,,,,,47153.55,38836.75,42885.18,42557.66,207
+attributed_traffic_source,,,,(direct),(none),,,,,,37622.03,40830.55,39038.45,39521.15,208
+attributed_traffic_source,,,,<Other>,<Other>,,,,,,30617.75,28595.9,29317.64,29165.64,144
+attributed_traffic_source,,,,<Other>,referral,,,,,,12552.5,10057.11,11548.1,11435.37,64
+attributed_traffic_source,,,,google,cpc,,,,,,8490.46,7637.01,8066.92,8032.38,40
+attributed_traffic_source,,,,shop.googlemerchandisestore.com,referral,,,,,,7488.92,11054.06,9015.43,9022.59,63
+attributed_traffic_source,,,,<Other>,organic,,,,,,3139.01,2898.26,3018.63,3018.63,14
+attributed_traffic_source,,,,(data deleted),(data deleted),,,,,,1248.72,8403.3,5422.58,5559.52,46
+attributed_traffic_source,,,,<Other>,(data deleted),,,,,,399.4,399.4,399.4,399.4,2
+paid_campaign,CMP_GOOG_02,Google_Search_Generic,Google,,,3402.750000000,4634,115145,0.730000000,29.550000000,,,,,
+paid_campaign,CMP_GOOG_01,Google_Search_Brand,Google,,,3335.040000000,5182,125223,0.640000000,26.630000000,,,,,
+paid_campaign,CMP_FB_01,Facebook_Retargeting,Facebook,,,3024.720000000,3797,138881,0.800000000,21.780000000,,,,,
+paid_campaign,CMP_FB_02,Facebook_Lookalike,Facebook,,,2698.530000000,3039,128289,0.890000000,21.030000000,,,,,
+paid_campaign,CMP_YT_02,YouTube_Awareness,YouTube,,,2160.960000000,2051,153403,1.050000000,14.090000000,,,,,
+paid_campaign,CMP_YT_01,YouTube_Video_Action,YouTube,,,2096.240000000,1862,137476,1.130000000,15.250000000,,,,,

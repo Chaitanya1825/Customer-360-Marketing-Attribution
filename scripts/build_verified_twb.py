@@ -1,0 +1,717 @@
+import xml.etree.ElementTree as ET
+import subprocess
+import time
+import json
+import os
+
+BASE_DIR = r"C:\Users\HP\Desktop\Customer 360 and Marketing Attribution Platform"
+TABLEAU_DIR = os.path.join(BASE_DIR, "exports", "tableau")
+DIR_NORM = TABLEAU_DIR.replace("\\", "/")
+TARGET_TWB = os.path.join(TABLEAU_DIR, "Customer360_Analytics.twb")
+
+def generate_tableau_workbook_xml():
+    xml = """<?xml version='1.0' encoding='utf-8' ?>
+<!-- build 20263.26.1022.1645 -->
+<workbook original-version='18.1' source-build='2026.3.0 (20263.26.1022.1645)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+
+  <!-- ================================================================= -->
+  <!-- 1. DATA SOURCES (3 Separate Datasources - Zero Fan-Out / Join Duplication) -->
+  <!-- ================================================================= -->
+  <datasources>
+    <!-- Datasource 1: customer_360 (500 CRM Customers) -->
+    <datasource caption='customer_360' inline='true' name='federated.customer_360' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='customer_360' name='textscan.customer_360'>
+            <connection class='textscan' directory='__DIR_NORM__' filename='customer_360.csv' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.customer_360' name='customer_360.csv' table='[customer_360#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='customer_id' ordinal='0' />
+            <column datatype='string' name='name' ordinal='1' />
+            <column datatype='string' name='email' ordinal='2' />
+            <column datatype='string' name='city' ordinal='3' />
+            <column datatype='date' name='signup_date' ordinal='4' />
+            <column datatype='integer' name='total_orders' ordinal='5' />
+            <column datatype='real' name='total_revenue' ordinal='6' />
+            <column datatype='real' name='average_order_value' ordinal='7' />
+            <column datatype='date' name='first_order_date' ordinal='8' />
+            <column datatype='date' name='last_order_date' ordinal='9' />
+            <column datatype='integer' name='total_sessions' ordinal='10' />
+            <column datatype='date' name='first_session_date' ordinal='11' />
+            <column datatype='date' name='last_session_date' ordinal='12' />
+            <column datatype='integer' name='recency_days' ordinal='13' />
+            <column datatype='integer' name='frequency' ordinal='14' />
+            <column datatype='real' name='monetary_value' ordinal='15' />
+            <column datatype='string' name='customer_segment' ordinal='16' />
+          </columns>
+        </relation>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Customer ID' datatype='string' name='[customer_id]' role='dimension' type='nominal' />
+      <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+      <column caption='Email' datatype='string' name='[email]' role='dimension' type='nominal' />
+      <column caption='City' datatype='string' name='[city]' role='dimension' type='nominal' />
+      <column caption='Customer Segment' datatype='string' name='[customer_segment]' role='dimension' type='nominal' />
+      <column caption='Total Revenue' datatype='real' name='[total_revenue]' role='measure' type='quantitative' />
+      <column caption='Total Orders' datatype='integer' name='[total_orders]' role='measure' type='quantitative' />
+      <column caption='Average Order Value' datatype='real' name='[average_order_value]' role='measure' type='quantitative' />
+      <column caption='Recency (Days)' datatype='integer' name='[recency_days]' role='measure' type='quantitative' />
+      <column caption='Frequency' datatype='integer' name='[frequency]' role='measure' type='quantitative' />
+      <column caption='Monetary Value' datatype='real' name='[monetary_value]' role='measure' type='quantitative' />
+      <column caption='Total Sessions' datatype='integer' name='[total_sessions]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.5' show-structure='true' />
+    </datasource>
+
+    <!-- Datasource 2: fct_order_attribution (1,231 Touchpoints & 1,000 Orders) -->
+    <datasource caption='fct_order_attribution' inline='true' name='federated.fct_order_attribution' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='fct_order_attribution' name='textscan.fct_order_attribution'>
+            <connection class='textscan' directory='__DIR_NORM__' filename='fct_order_attribution.csv' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.fct_order_attribution' name='fct_order_attribution.csv' table='[fct_order_attribution#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='order_id' ordinal='0' />
+            <column datatype='string' name='customer_id' ordinal='1' />
+            <column datatype='date' name='order_date' ordinal='2' />
+            <column datatype='real' name='order_amount' ordinal='3' />
+            <column datatype='string' name='traffic_source' ordinal='4' />
+            <column datatype='string' name='traffic_medium' ordinal='5' />
+            <column datatype='string' name='campaign_name' ordinal='6' />
+            <column datatype='integer' name='touchpoint_rank' ordinal='7' />
+            <column datatype='integer' name='total_touchpoints' ordinal='8' />
+            <column datatype='real' name='first_touch_credit' ordinal='9' />
+            <column datatype='real' name='last_touch_credit' ordinal='10' />
+            <column datatype='real' name='linear_credit' ordinal='11' />
+            <column datatype='real' name='time_decay_credit' ordinal='12' />
+          </columns>
+        </relation>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Order ID' datatype='string' name='[order_id]' role='dimension' type='nominal' />
+      <column caption='Customer ID' datatype='string' name='[customer_id]' role='dimension' type='nominal' />
+      <column caption='Traffic Source' datatype='string' name='[traffic_source]' role='dimension' type='nominal' />
+      <column caption='Traffic Medium' datatype='string' name='[traffic_medium]' role='dimension' type='nominal' />
+      <column caption='Campaign Name' datatype='string' name='[campaign_name]' role='dimension' type='nominal' />
+      <column caption='Total Touchpoints' datatype='integer' name='[total_touchpoints]' role='dimension' type='ordinal' />
+      <column caption='Order Amount' datatype='real' name='[order_amount]' role='measure' type='quantitative' />
+      <column caption='First-Touch Credit' datatype='real' name='[first_touch_credit]' role='measure' type='quantitative' />
+      <column caption='Last-Touch Credit' datatype='real' name='[last_touch_credit]' role='measure' type='quantitative' />
+      <column caption='Linear Credit' datatype='real' name='[linear_credit]' role='measure' type='quantitative' />
+      <column caption='Time-Decay Credit' datatype='real' name='[time_decay_credit]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.5' show-structure='true' />
+    </datasource>
+
+    <!-- Datasource 3: fct_campaign_performance (Separated Paid vs Attributed) -->
+    <datasource caption='fct_campaign_performance' inline='true' name='federated.fct_campaign_performance' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='fct_campaign_performance' name='textscan.fct_campaign_performance'>
+            <connection class='textscan' directory='__DIR_NORM__' filename='fct_campaign_performance.csv' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.fct_campaign_performance' name='fct_campaign_performance.csv' table='[fct_campaign_performance#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='reporting_section' ordinal='0' />
+            <column datatype='string' name='campaign_id' ordinal='1' />
+            <column datatype='string' name='campaign_name' ordinal='2' />
+            <column datatype='string' name='marketing_channel' ordinal='3' />
+            <column datatype='string' name='traffic_source' ordinal='4' />
+            <column datatype='string' name='traffic_medium' ordinal='5' />
+            <column datatype='real' name='total_spend' ordinal='6' />
+            <column datatype='integer' name='total_clicks' ordinal='7' />
+            <column datatype='integer' name='total_impressions' ordinal='8' />
+            <column datatype='real' name='cost_per_click' ordinal='9' />
+            <column datatype='real' name='cost_per_1000_impressions' ordinal='10' />
+            <column datatype='real' name='first_touch_revenue' ordinal='11' />
+            <column datatype='real' name='last_touch_revenue' ordinal='12' />
+            <column datatype='real' name='linear_attributed_revenue' ordinal='13' />
+            <column datatype='real' name='time_decay_attributed_revenue' ordinal='14' />
+            <column datatype='integer' name='attributed_order_count' ordinal='15' />
+          </columns>
+        </relation>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Reporting Section' datatype='string' name='[reporting_section]' role='dimension' type='nominal' />
+      <column caption='Campaign ID' datatype='string' name='[campaign_id]' role='dimension' type='nominal' />
+      <column caption='Campaign Name' datatype='string' name='[campaign_name]' role='dimension' type='nominal' />
+      <column caption='Marketing Channel' datatype='string' name='[marketing_channel]' role='dimension' type='nominal' />
+      <column caption='Traffic Source' datatype='string' name='[traffic_source]' role='dimension' type='nominal' />
+      <column caption='Traffic Medium' datatype='string' name='[traffic_medium]' role='dimension' type='nominal' />
+      <column caption='Total Spend' datatype='real' name='[total_spend]' role='measure' type='quantitative' />
+      <column caption='Cost Per Click (CPC)' datatype='real' name='[cost_per_click]' role='measure' type='quantitative' />
+      <column caption='Cost Per 1k Impressions (CPM)' datatype='real' name='[cost_per_1000_impressions]' role='measure' type='quantitative' />
+      <column caption='First-Touch Revenue' datatype='real' name='[first_touch_revenue]' role='measure' type='quantitative' />
+      <column caption='Last-Touch Revenue' datatype='real' name='[last_touch_revenue]' role='measure' type='quantitative' />
+      <column caption='Linear Revenue' datatype='real' name='[linear_attributed_revenue]' role='measure' type='quantitative' />
+      <column caption='Time-Decay Revenue' datatype='real' name='[time_decay_attributed_revenue]' role='measure' type='quantitative' />
+      <column caption='Attributed Order Count' datatype='integer' name='[attributed_order_count]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.5' show-structure='true' />
+    </datasource>
+  </datasources>
+
+  <!-- ================================================================= -->
+  <!-- 2. WORKSHEETS (Unique Worksheets Per Dashboard)                   -->
+  <!-- ================================================================= -->
+  <worksheets>
+    <!-- WS 1: Exec_KPI_Revenue -->
+    <worksheet name='Exec_KPI_Revenue'>
+      <table>
+        <view>
+          <datasources><datasource caption='customer_360' name='federated.customer_360' /></datasources>
+          <datasource-dependencies datasource='federated.customer_360'>
+            <column caption='Total Revenue' datatype='real' name='[total_revenue]' role='measure' type='quantitative' />
+            <column-instance column='[total_revenue]' derivation='Sum' name='[sum:total_revenue:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes><pane selection-relaxation-option='selection-relaxation-allow'><view><breakdown value='auto' /></view><mark class='Text' /><encodings><text column='[federated.customer_360].[sum:total_revenue:qk]' /></encodings></pane></panes>
+        <rows /><cols />
+      </table>
+      <simple-id uuid='{00000001-0001-0000-0000-000000000001}' />
+    </worksheet>
+
+    <!-- WS 2: Exec_KPI_Customers -->
+    <worksheet name='Exec_KPI_Customers'>
+      <table>
+        <view>
+          <datasources><datasource caption='customer_360' name='federated.customer_360' /></datasources>
+          <datasource-dependencies datasource='federated.customer_360'>
+            <column caption='Customer ID' datatype='string' name='[customer_id]' role='dimension' type='nominal' />
+            <column-instance column='[customer_id]' derivation='CountD' name='[ctd:customer_id:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes><pane selection-relaxation-option='selection-relaxation-allow'><view><breakdown value='auto' /></view><mark class='Text' /><encodings><text column='[federated.customer_360].[ctd:customer_id:qk]' /></encodings></pane></panes>
+        <rows /><cols />
+      </table>
+      <simple-id uuid='{00000001-0001-0000-0000-000000000002}' />
+    </worksheet>
+
+    <!-- WS 3: Exec_KPI_Orders -->
+    <worksheet name='Exec_KPI_Orders'>
+      <table>
+        <view>
+          <datasources><datasource caption='customer_360' name='federated.customer_360' /></datasources>
+          <datasource-dependencies datasource='federated.customer_360'>
+            <column caption='Total Orders' datatype='integer' name='[total_orders]' role='measure' type='quantitative' />
+            <column-instance column='[total_orders]' derivation='Sum' name='[sum:total_orders:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes><pane selection-relaxation-option='selection-relaxation-allow'><view><breakdown value='auto' /></view><mark class='Text' /><encodings><text column='[federated.customer_360].[sum:total_orders:qk]' /></encodings></pane></panes>
+        <rows /><cols />
+      </table>
+      <simple-id uuid='{00000001-0001-0000-0000-000000000003}' />
+    </worksheet>
+
+    <!-- WS 4: Exec_KPI_AOV -->
+    <worksheet name='Exec_KPI_AOV'>
+      <table>
+        <view>
+          <datasources><datasource caption='customer_360' name='federated.customer_360' /></datasources>
+          <datasource-dependencies datasource='federated.customer_360'>
+            <column caption='Average Order Value' datatype='real' name='[average_order_value]' role='measure' type='quantitative' />
+            <column-instance column='[average_order_value]' derivation='Avg' name='[avg:average_order_value:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes><pane selection-relaxation-option='selection-relaxation-allow'><view><breakdown value='auto' /></view><mark class='Text' /><encodings><text column='[federated.customer_360].[avg:average_order_value:qk]' /></encodings></pane></panes>
+        <rows /><cols />
+      </table>
+      <simple-id uuid='{00000001-0001-0000-0000-000000000004}' />
+    </worksheet>
+
+    <!-- WS 5: Exec_Segment_Distribution -->
+    <worksheet name='Exec_Segment_Distribution'>
+      <table>
+        <view>
+          <datasources><datasource caption='customer_360' name='federated.customer_360' /></datasources>
+          <datasource-dependencies datasource='federated.customer_360'>
+            <column caption='Customer ID' datatype='string' name='[customer_id]' role='dimension' type='nominal' />
+            <column caption='Customer Segment' datatype='string' name='[customer_segment]' role='dimension' type='nominal' />
+            <column-instance column='[customer_id]' derivation='Count' name='[cnt:customer_id:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[customer_segment]' derivation='None' name='[none:customer_segment:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes><pane selection-relaxation-option='selection-relaxation-allow'><view><breakdown value='auto' /></view><mark class='Bar' /><encodings><color column='[federated.customer_360].[none:customer_segment:nk]' /><text column='[federated.customer_360].[cnt:customer_id:qk]' /></encodings></pane></panes>
+        <rows>[federated.customer_360].[none:customer_segment:nk]</rows>
+        <cols>[federated.customer_360].[cnt:customer_id:qk]</cols>
+      </table>
+      <simple-id uuid='{00000001-0001-0000-0000-000000000005}' />
+    </worksheet>
+
+    <!-- WS 6: Exec_Revenue_by_Segment -->
+    <worksheet name='Exec_Revenue_by_Segment'>
+      <table>
+        <view>
+          <datasources><datasource caption='customer_360' name='federated.customer_360' /></datasources>
+          <datasource-dependencies datasource='federated.customer_360'>
+            <column caption='Customer Segment' datatype='string' name='[customer_segment]' role='dimension' type='nominal' />
+            <column caption='Total Revenue' datatype='real' name='[total_revenue]' role='measure' type='quantitative' />
+            <column-instance column='[customer_segment]' derivation='None' name='[none:customer_segment:nk]' pivot='key' type='nominal' />
+            <column-instance column='[total_revenue]' derivation='Sum' name='[sum:total_revenue:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes><pane selection-relaxation-option='selection-relaxation-allow'><view><breakdown value='auto' /></view><mark class='Bar' /><encodings><color column='[federated.customer_360].[none:customer_segment:nk]' /><text column='[federated.customer_360].[sum:total_revenue:qk]' /></encodings></pane></panes>
+        <rows>[federated.customer_360].[none:customer_segment:nk]</rows>
+        <cols>[federated.customer_360].[sum:total_revenue:qk]</cols>
+      </table>
+      <simple-id uuid='{00000001-0001-0000-0000-000000000006}' />
+    </worksheet>
+
+    <!-- WS 7: Cust_RFM_Scatter -->
+    <worksheet name='Cust_RFM_Scatter'>
+      <table>
+        <view>
+          <datasources><datasource caption='customer_360' name='federated.customer_360' /></datasources>
+          <datasource-dependencies datasource='federated.customer_360'>
+            <column caption='Customer ID' datatype='string' name='[customer_id]' role='dimension' type='nominal' />
+            <column caption='Customer Segment' datatype='string' name='[customer_segment]' role='dimension' type='nominal' />
+            <column caption='Recency (Days)' datatype='integer' name='[recency_days]' role='measure' type='quantitative' />
+            <column caption='Monetary Value' datatype='real' name='[monetary_value]' role='measure' type='quantitative' />
+            <column caption='Frequency' datatype='integer' name='[frequency]' role='measure' type='quantitative' />
+            <column-instance column='[customer_id]' derivation='None' name='[none:customer_id:nk]' pivot='key' type='nominal' />
+            <column-instance column='[customer_segment]' derivation='None' name='[none:customer_segment:nk]' pivot='key' type='nominal' />
+            <column-instance column='[recency_days]' derivation='None' name='[none:recency_days:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[monetary_value]' derivation='None' name='[none:monetary_value:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[frequency]' derivation='None' name='[none:frequency:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='false' />
+        </view>
+        <style />
+        <panes><pane selection-relaxation-option='selection-relaxation-allow'><view><breakdown value='auto' /></view><mark class='Circle' /><encodings><color column='[federated.customer_360].[none:customer_segment:nk]' /><size column='[federated.customer_360].[none:frequency:qk]' /><lod column='[federated.customer_360].[none:customer_id:nk]' /></encodings></pane></panes>
+        <rows>[federated.customer_360].[none:recency_days:qk]</rows>
+        <cols>[federated.customer_360].[none:monetary_value:qk]</cols>
+      </table>
+      <simple-id uuid='{00000001-0001-0000-0000-000000000007}' />
+    </worksheet>
+
+    <!-- WS 8: Cust_Segment_Distribution -->
+    <worksheet name='Cust_Segment_Distribution'>
+      <table>
+        <view>
+          <datasources><datasource caption='customer_360' name='federated.customer_360' /></datasources>
+          <datasource-dependencies datasource='federated.customer_360'>
+            <column caption='Customer ID' datatype='string' name='[customer_id]' role='dimension' type='nominal' />
+            <column caption='Customer Segment' datatype='string' name='[customer_segment]' role='dimension' type='nominal' />
+            <column-instance column='[customer_id]' derivation='Count' name='[cnt:customer_id:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[customer_segment]' derivation='None' name='[none:customer_segment:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes><pane selection-relaxation-option='selection-relaxation-allow'><view><breakdown value='auto' /></view><mark class='Bar' /><encodings><color column='[federated.customer_360].[none:customer_segment:nk]' /><text column='[federated.customer_360].[cnt:customer_id:qk]' /></encodings></pane></panes>
+        <rows>[federated.customer_360].[none:customer_segment:nk]</rows>
+        <cols>[federated.customer_360].[cnt:customer_id:qk]</cols>
+      </table>
+      <simple-id uuid='{00000001-0001-0000-0000-000000000008}' />
+    </worksheet>
+
+    <!-- WS 9: Cust_Revenue_by_Segment -->
+    <worksheet name='Cust_Revenue_by_Segment'>
+      <table>
+        <view>
+          <datasources><datasource caption='customer_360' name='federated.customer_360' /></datasources>
+          <datasource-dependencies datasource='federated.customer_360'>
+            <column caption='Customer Segment' datatype='string' name='[customer_segment]' role='dimension' type='nominal' />
+            <column caption='Total Revenue' datatype='real' name='[total_revenue]' role='measure' type='quantitative' />
+            <column-instance column='[customer_segment]' derivation='None' name='[none:customer_segment:nk]' pivot='key' type='nominal' />
+            <column-instance column='[total_revenue]' derivation='Sum' name='[sum:total_revenue:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes><pane selection-relaxation-option='selection-relaxation-allow'><view><breakdown value='auto' /></view><mark class='Bar' /><encodings><color column='[federated.customer_360].[none:customer_segment:nk]' /><text column='[federated.customer_360].[sum:total_revenue:qk]' /></encodings></pane></panes>
+        <rows>[federated.customer_360].[none:customer_segment:nk]</rows>
+        <cols>[federated.customer_360].[sum:total_revenue:qk]</cols>
+      </table>
+      <simple-id uuid='{00000001-0001-0000-0000-000000000009}' />
+    </worksheet>
+
+    <!-- WS 10: Cust_Frequency_Analysis -->
+    <worksheet name='Cust_Frequency_Analysis'>
+      <table>
+        <view>
+          <datasources><datasource caption='customer_360' name='federated.customer_360' /></datasources>
+          <datasource-dependencies datasource='federated.customer_360'>
+            <column caption='Customer ID' datatype='string' name='[customer_id]' role='dimension' type='nominal' />
+            <column caption='Frequency' datatype='integer' name='[frequency]' role='dimension' type='ordinal' />
+            <column-instance column='[customer_id]' derivation='Count' name='[cnt:customer_id:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[frequency]' derivation='None' name='[none:frequency:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes><pane selection-relaxation-option='selection-relaxation-allow'><view><breakdown value='auto' /></view><mark class='Bar' /><encodings><color column='[federated.customer_360].[none:frequency:ok]' /><text column='[federated.customer_360].[cnt:customer_id:qk]' /></encodings></pane></panes>
+        <rows>[federated.customer_360].[cnt:customer_id:qk]</rows>
+        <cols>[federated.customer_360].[none:frequency:ok]</cols>
+      </table>
+      <simple-id uuid='{00000001-0001-0000-0000-000000000010}' />
+    </worksheet>
+
+    <!-- WS 11: Attr_First_Touch_Rev -->
+    <worksheet name='Attr_First_Touch_Rev'>
+      <table>
+        <view>
+          <datasources><datasource caption='fct_campaign_performance' name='federated.fct_campaign_performance' /></datasources>
+          <datasource-dependencies datasource='federated.fct_campaign_performance'>
+            <column caption='Traffic Source' datatype='string' name='[traffic_source]' role='dimension' type='nominal' />
+            <column caption='First-Touch Revenue' datatype='real' name='[first_touch_revenue]' role='measure' type='quantitative' />
+            <column caption='Reporting Section' datatype='string' name='[reporting_section]' role='dimension' type='nominal' />
+            <column-instance column='[traffic_source]' derivation='None' name='[none:traffic_source:nk]' pivot='key' type='nominal' />
+            <column-instance column='[reporting_section]' derivation='None' name='[none:reporting_section:nk]' pivot='key' type='nominal' />
+            <column-instance column='[first_touch_revenue]' derivation='Sum' name='[sum:first_touch_revenue:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.fct_campaign_performance].[none:reporting_section:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:reporting_section:nk]' member='&quot;attributed_traffic_source&quot;' />
+            </groupfilter>
+          </filter>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes><pane selection-relaxation-option='selection-relaxation-allow'><view><breakdown value='auto' /></view><mark class='Bar' /><encodings><color column='[federated.fct_campaign_performance].[none:traffic_source:nk]' /><text column='[federated.fct_campaign_performance].[sum:first_touch_revenue:qk]' /></encodings></pane></panes>
+        <rows>[federated.fct_campaign_performance].[none:traffic_source:nk]</rows>
+        <cols>[federated.fct_campaign_performance].[sum:first_touch_revenue:qk]</cols>
+      </table>
+      <simple-id uuid='{00000001-0001-0000-0000-000000000011}' />
+    </worksheet>
+
+    <!-- WS 12: Attr_Last_Touch_Rev -->
+    <worksheet name='Attr_Last_Touch_Rev'>
+      <table>
+        <view>
+          <datasources><datasource caption='fct_campaign_performance' name='federated.fct_campaign_performance' /></datasources>
+          <datasource-dependencies datasource='federated.fct_campaign_performance'>
+            <column caption='Traffic Source' datatype='string' name='[traffic_source]' role='dimension' type='nominal' />
+            <column caption='Last-Touch Revenue' datatype='real' name='[last_touch_revenue]' role='measure' type='quantitative' />
+            <column caption='Reporting Section' datatype='string' name='[reporting_section]' role='dimension' type='nominal' />
+            <column-instance column='[traffic_source]' derivation='None' name='[none:traffic_source:nk]' pivot='key' type='nominal' />
+            <column-instance column='[reporting_section]' derivation='None' name='[none:reporting_section:nk]' pivot='key' type='nominal' />
+            <column-instance column='[last_touch_revenue]' derivation='Sum' name='[sum:last_touch_revenue:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.fct_campaign_performance].[none:reporting_section:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:reporting_section:nk]' member='&quot;attributed_traffic_source&quot;' />
+            </groupfilter>
+          </filter>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes><pane selection-relaxation-option='selection-relaxation-allow'><view><breakdown value='auto' /></view><mark class='Bar' /><encodings><color column='[federated.fct_campaign_performance].[none:traffic_source:nk]' /><text column='[federated.fct_campaign_performance].[sum:last_touch_revenue:qk]' /></encodings></pane></panes>
+        <rows>[federated.fct_campaign_performance].[none:traffic_source:nk]</rows>
+        <cols>[federated.fct_campaign_performance].[sum:last_touch_revenue:qk]</cols>
+      </table>
+      <simple-id uuid='{00000001-0001-0000-0000-000000000012}' />
+    </worksheet>
+
+    <!-- WS 13: Attr_Time_Decay_Rev -->
+    <worksheet name='Attr_Time_Decay_Rev'>
+      <table>
+        <view>
+          <datasources><datasource caption='fct_campaign_performance' name='federated.fct_campaign_performance' /></datasources>
+          <datasource-dependencies datasource='federated.fct_campaign_performance'>
+            <column caption='Traffic Source' datatype='string' name='[traffic_source]' role='dimension' type='nominal' />
+            <column caption='Time-Decay Revenue' datatype='real' name='[time_decay_attributed_revenue]' role='measure' type='quantitative' />
+            <column caption='Reporting Section' datatype='string' name='[reporting_section]' role='dimension' type='nominal' />
+            <column-instance column='[traffic_source]' derivation='None' name='[none:traffic_source:nk]' pivot='key' type='nominal' />
+            <column-instance column='[reporting_section]' derivation='None' name='[none:reporting_section:nk]' pivot='key' type='nominal' />
+            <column-instance column='[time_decay_attributed_revenue]' derivation='Sum' name='[sum:time_decay_attributed_revenue:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.fct_campaign_performance].[none:reporting_section:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:reporting_section:nk]' member='&quot;attributed_traffic_source&quot;' />
+            </groupfilter>
+          </filter>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes><pane selection-relaxation-option='selection-relaxation-allow'><view><breakdown value='auto' /></view><mark class='Bar' /><encodings><color column='[federated.fct_campaign_performance].[none:traffic_source:nk]' /><text column='[federated.fct_campaign_performance].[sum:time_decay_attributed_revenue:qk]' /></encodings></pane></panes>
+        <rows>[federated.fct_campaign_performance].[none:traffic_source:nk]</rows>
+        <cols>[federated.fct_campaign_performance].[sum:time_decay_attributed_revenue:qk]</cols>
+      </table>
+      <simple-id uuid='{00000001-0001-0000-0000-000000000013}' />
+    </worksheet>
+
+    <!-- WS 14: Attr_Touchpoint_Depth -->
+    <worksheet name='Attr_Touchpoint_Depth'>
+      <table>
+        <view>
+          <datasources><datasource caption='fct_order_attribution' name='federated.fct_order_attribution' /></datasources>
+          <datasource-dependencies datasource='federated.fct_order_attribution'>
+            <column caption='Total Touchpoints' datatype='integer' name='[total_touchpoints]' role='dimension' type='ordinal' />
+            <column caption='Order ID' datatype='string' name='[order_id]' role='dimension' type='nominal' />
+            <column-instance column='[total_touchpoints]' derivation='None' name='[none:total_touchpoints:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[order_id]' derivation='CountD' name='[ctd:order_id:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes><pane selection-relaxation-option='selection-relaxation-allow'><view><breakdown value='auto' /></view><mark class='Bar' /><encodings><color column='[federated.fct_order_attribution].[none:total_touchpoints:ok]' /><text column='[federated.fct_order_attribution].[ctd:order_id:qk]' /></encodings></pane></panes>
+        <rows>[federated.fct_order_attribution].[ctd:order_id:qk]</rows>
+        <cols>[federated.fct_order_attribution].[none:total_touchpoints:ok]</cols>
+      </table>
+      <simple-id uuid='{00000001-0001-0000-0000-000000000014}' />
+    </worksheet>
+
+    <!-- WS 15: Paid_Campaign_Spend -->
+    <worksheet name='Paid_Campaign_Spend'>
+      <table>
+        <view>
+          <datasources><datasource caption='fct_campaign_performance' name='federated.fct_campaign_performance' /></datasources>
+          <datasource-dependencies datasource='federated.fct_campaign_performance'>
+            <column caption='Campaign Name' datatype='string' name='[campaign_name]' role='dimension' type='nominal' />
+            <column caption='Marketing Channel' datatype='string' name='[marketing_channel]' role='dimension' type='nominal' />
+            <column caption='Total Spend' datatype='real' name='[total_spend]' role='measure' type='quantitative' />
+            <column caption='Reporting Section' datatype='string' name='[reporting_section]' role='dimension' type='nominal' />
+            <column-instance column='[campaign_name]' derivation='None' name='[none:campaign_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[marketing_channel]' derivation='None' name='[none:marketing_channel:nk]' pivot='key' type='nominal' />
+            <column-instance column='[reporting_section]' derivation='None' name='[none:reporting_section:nk]' pivot='key' type='nominal' />
+            <column-instance column='[total_spend]' derivation='Sum' name='[sum:total_spend:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.fct_campaign_performance].[none:reporting_section:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:reporting_section:nk]' member='&quot;paid_campaign&quot;' />
+            </groupfilter>
+          </filter>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes><pane selection-relaxation-option='selection-relaxation-allow'><view><breakdown value='auto' /></view><mark class='Bar' /><encodings><color column='[federated.fct_campaign_performance].[none:marketing_channel:nk]' /><text column='[federated.fct_campaign_performance].[sum:total_spend:qk]' /></encodings></pane></panes>
+        <rows>[federated.fct_campaign_performance].[none:campaign_name:nk]</rows>
+        <cols>[federated.fct_campaign_performance].[sum:total_spend:qk]</cols>
+      </table>
+      <simple-id uuid='{00000001-0001-0000-0000-000000000015}' />
+    </worksheet>
+
+    <!-- WS 16: Paid_CPC_vs_CPM -->
+    <worksheet name='Paid_CPC_vs_CPM'>
+      <table>
+        <view>
+          <datasources><datasource caption='fct_campaign_performance' name='federated.fct_campaign_performance' /></datasources>
+          <datasource-dependencies datasource='federated.fct_campaign_performance'>
+            <column caption='Campaign Name' datatype='string' name='[campaign_name]' role='dimension' type='nominal' />
+            <column caption='Marketing Channel' datatype='string' name='[marketing_channel]' role='dimension' type='nominal' />
+            <column caption='Cost Per Click (CPC)' datatype='real' name='[cost_per_click]' role='measure' type='quantitative' />
+            <column caption='Cost Per 1k Impressions (CPM)' datatype='real' name='[cost_per_1000_impressions]' role='measure' type='quantitative' />
+            <column caption='Total Spend' datatype='real' name='[total_spend]' role='measure' type='quantitative' />
+            <column caption='Reporting Section' datatype='string' name='[reporting_section]' role='dimension' type='nominal' />
+            <column-instance column='[campaign_name]' derivation='None' name='[none:campaign_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[marketing_channel]' derivation='None' name='[none:marketing_channel:nk]' pivot='key' type='nominal' />
+            <column-instance column='[reporting_section]' derivation='None' name='[none:reporting_section:nk]' pivot='key' type='nominal' />
+            <column-instance column='[cost_per_click]' derivation='Sum' name='[sum:cost_per_click:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[cost_per_1000_impressions]' derivation='Sum' name='[sum:cost_per_1000_impressions:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_spend]' derivation='Sum' name='[sum:total_spend:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.fct_campaign_performance].[none:reporting_section:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:reporting_section:nk]' member='&quot;paid_campaign&quot;' />
+            </groupfilter>
+          </filter>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes><pane selection-relaxation-option='selection-relaxation-allow'><view><breakdown value='auto' /></view><mark class='Circle' /><encodings><color column='[federated.fct_campaign_performance].[none:marketing_channel:nk]' /><size column='[federated.fct_campaign_performance].[sum:total_spend:qk]' /><lod column='[federated.fct_campaign_performance].[none:campaign_name:nk]' /></encodings></pane></panes>
+        <rows>[federated.fct_campaign_performance].[sum:cost_per_click:qk]</rows>
+        <cols>[federated.fct_campaign_performance].[sum:cost_per_1000_impressions:qk]</cols>
+      </table>
+      <simple-id uuid='{00000001-0001-0000-0000-000000000016}' />
+    </worksheet>
+  </worksheets>
+
+  <!-- ================================================================= -->
+  <!-- 3. DASHBOARDS (Clean Dark Theme #0B1020 & Professional Layout)    -->
+  <!-- ================================================================= -->
+  <dashboards>
+    <!-- Dashboard 1: 1. Executive Overview -->
+    <dashboard name='1. Executive Overview'>
+      <style><style-rule element='dashboard'><format attr='background-color' value='#0B1020' /></style-rule></style>
+      <size maxheight='850' maxwidth='1366' minheight='850' minwidth='1366' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='100' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='18000' id='101' name='Exec_KPI_Revenue' w='23500' x='1500' y='2000' />
+          <zone h='18000' id='102' name='Exec_KPI_Customers' w='23500' x='26000' y='2000' />
+          <zone h='18000' id='103' name='Exec_KPI_Orders' w='23500' x='50500' y='2000' />
+          <zone h='18000' id='104' name='Exec_KPI_AOV' w='23500' x='75000' y='2000' />
+          <zone h='75000' id='105' name='Exec_Segment_Distribution' w='48000' x='1500' y='22000' />
+          <zone h='75000' id='106' name='Exec_Revenue_by_Segment' w='48000' x='50500' y='22000' />
+        </zone>
+      </zones>
+      <simple-id uuid='{00000002-0001-0000-0000-000000000001}' />
+    </dashboard>
+
+    <!-- Dashboard 2: 2. Customer Intelligence -->
+    <dashboard name='2. Customer Intelligence'>
+      <style><style-rule element='dashboard'><format attr='background-color' value='#0B1020' /></style-rule></style>
+      <size maxheight='850' maxwidth='1366' minheight='850' minwidth='1366' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='200' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='52000' id='201' name='Cust_RFM_Scatter' w='60000' x='1500' y='2000' />
+          <zone h='52000' id='202' name='Cust_Segment_Distribution' w='36000' x='62500' y='2000' />
+          <zone h='41000' id='203' name='Cust_Revenue_by_Segment' w='48000' x='1500' y='56000' />
+          <zone h='41000' id='204' name='Cust_Frequency_Analysis' w='48000' x='50500' y='56000' />
+        </zone>
+      </zones>
+      <simple-id uuid='{00000002-0001-0000-0000-000000000002}' />
+    </dashboard>
+
+    <!-- Dashboard 3: 3. Marketing Attribution -->
+    <dashboard name='3. Marketing Attribution'>
+      <style><style-rule element='dashboard'><format attr='background-color' value='#0B1020' /></style-rule></style>
+      <size maxheight='850' maxwidth='1366' minheight='850' minwidth='1366' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='300' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='45000' id='301' name='Attr_First_Touch_Rev' w='32000' x='1500' y='2000' />
+          <zone h='45000' id='302' name='Attr_Last_Touch_Rev' w='32000' x='34500' y='2000' />
+          <zone h='45000' id='303' name='Attr_Time_Decay_Rev' w='32000' x='67500' y='2000' />
+          <zone h='48000' id='304' name='Attr_Touchpoint_Depth' w='32000' x='1500' y='49000' />
+          <zone h='48000' id='305' name='Paid_Campaign_Spend' w='32000' x='34500' y='49000' />
+          <zone h='48000' id='306' name='Paid_CPC_vs_CPM' w='32000' x='67500' y='49000' />
+        </zone>
+      </zones>
+      <simple-id uuid='{00000002-0001-0000-0000-000000000003}' />
+    </dashboard>
+  </dashboards>
+
+  <!-- ================================================================= -->
+  <!-- 4. WINDOWS CONFIGURATION                                          -->
+  <!-- ================================================================= -->
+  <windows source-height='30'>
+    <!-- Worksheet Windows with standard card strips -->
+    <window class='worksheet' name='Exec_KPI_Revenue'>
+      <cards><edge name='left'><strip size='160'><card type='pages' /><card type='filters' /><card type='marks' /></strip></edge><edge name='top'><strip size='2147483647'><card type='columns' /></strip><strip size='2147483647'><card type='rows' /></strip></edge></cards>
+      <simple-id uuid='{00000003-0001-0000-0000-000000000001}' />
+    </window>
+    <window class='worksheet' name='Exec_KPI_Customers'>
+      <cards><edge name='left'><strip size='160'><card type='pages' /><card type='filters' /><card type='marks' /></strip></edge><edge name='top'><strip size='2147483647'><card type='columns' /></strip><strip size='2147483647'><card type='rows' /></strip></edge></cards>
+      <simple-id uuid='{00000003-0001-0000-0000-000000000002}' />
+    </window>
+    <window class='worksheet' name='Exec_KPI_Orders'>
+      <cards><edge name='left'><strip size='160'><card type='pages' /><card type='filters' /><card type='marks' /></strip></edge><edge name='top'><strip size='2147483647'><card type='columns' /></strip><strip size='2147483647'><card type='rows' /></strip></edge></cards>
+      <simple-id uuid='{00000003-0001-0000-0000-000000000003}' />
+    </window>
+    <window class='worksheet' name='Exec_KPI_AOV'>
+      <cards><edge name='left'><strip size='160'><card type='pages' /><card type='filters' /><card type='marks' /></strip></edge><edge name='top'><strip size='2147483647'><card type='columns' /></strip><strip size='2147483647'><card type='rows' /></strip></edge></cards>
+      <simple-id uuid='{00000003-0001-0000-0000-000000000004}' />
+    </window>
+    <window class='worksheet' name='Exec_Segment_Distribution'>
+      <cards><edge name='left'><strip size='160'><card type='pages' /><card type='filters' /><card type='marks' /></strip></edge><edge name='top'><strip size='2147483647'><card type='columns' /></strip><strip size='2147483647'><card type='rows' /></strip></edge></cards>
+      <simple-id uuid='{00000003-0001-0000-0000-000000000005}' />
+    </window>
+    <window class='worksheet' name='Exec_Revenue_by_Segment'>
+      <cards><edge name='left'><strip size='160'><card type='pages' /><card type='filters' /><card type='marks' /></strip></edge><edge name='top'><strip size='2147483647'><card type='columns' /></strip><strip size='2147483647'><card type='rows' /></strip></edge></cards>
+      <simple-id uuid='{00000003-0001-0000-0000-000000000006}' />
+    </window>
+    <window class='worksheet' name='Cust_RFM_Scatter'>
+      <cards><edge name='left'><strip size='160'><card type='pages' /><card type='filters' /><card type='marks' /></strip></edge><edge name='top'><strip size='2147483647'><card type='columns' /></strip><strip size='2147483647'><card type='rows' /></strip></edge></cards>
+      <simple-id uuid='{00000003-0001-0000-0000-000000000007}' />
+    </window>
+    <window class='worksheet' name='Cust_Segment_Distribution'>
+      <cards><edge name='left'><strip size='160'><card type='pages' /><card type='filters' /><card type='marks' /></strip></edge><edge name='top'><strip size='2147483647'><card type='columns' /></strip><strip size='2147483647'><card type='rows' /></strip></edge></cards>
+      <simple-id uuid='{00000003-0001-0000-0000-000000000008}' />
+    </window>
+    <window class='worksheet' name='Cust_Revenue_by_Segment'>
+      <cards><edge name='left'><strip size='160'><card type='pages' /><card type='filters' /><card type='marks' /></strip></edge><edge name='top'><strip size='2147483647'><card type='columns' /></strip><strip size='2147483647'><card type='rows' /></strip></edge></cards>
+      <simple-id uuid='{00000003-0001-0000-0000-000000000009}' />
+    </window>
+    <window class='worksheet' name='Cust_Frequency_Analysis'>
+      <cards><edge name='left'><strip size='160'><card type='pages' /><card type='filters' /><card type='marks' /></strip></edge><edge name='top'><strip size='2147483647'><card type='columns' /></strip><strip size='2147483647'><card type='rows' /></strip></edge></cards>
+      <simple-id uuid='{00000003-0001-0000-0000-000000000010}' />
+    </window>
+    <window class='worksheet' name='Attr_First_Touch_Rev'>
+      <cards><edge name='left'><strip size='160'><card type='pages' /><card type='filters' /><card type='marks' /></strip></edge><edge name='top'><strip size='2147483647'><card type='columns' /></strip><strip size='2147483647'><card type='rows' /></strip></edge></cards>
+      <simple-id uuid='{00000003-0001-0000-0000-000000000011}' />
+    </window>
+    <window class='worksheet' name='Attr_Last_Touch_Rev'>
+      <cards><edge name='left'><strip size='160'><card type='pages' /><card type='filters' /><card type='marks' /></strip></edge><edge name='top'><strip size='2147483647'><card type='columns' /></strip><strip size='2147483647'><card type='rows' /></strip></edge></cards>
+      <simple-id uuid='{00000003-0001-0000-0000-000000000012}' />
+    </window>
+    <window class='worksheet' name='Attr_Time_Decay_Rev'>
+      <cards><edge name='left'><strip size='160'><card type='pages' /><card type='filters' /><card type='marks' /></strip></edge><edge name='top'><strip size='2147483647'><card type='columns' /></strip><strip size='2147483647'><card type='rows' /></strip></edge></cards>
+      <simple-id uuid='{00000003-0001-0000-0000-000000000013}' />
+    </window>
+    <window class='worksheet' name='Attr_Touchpoint_Depth'>
+      <cards><edge name='left'><strip size='160'><card type='pages' /><card type='filters' /><card type='marks' /></strip></edge><edge name='top'><strip size='2147483647'><card type='columns' /></strip><strip size='2147483647'><card type='rows' /></strip></edge></cards>
+      <simple-id uuid='{00000003-0001-0000-0000-000000000014}' />
+    </window>
+    <window class='worksheet' name='Paid_Campaign_Spend'>
+      <cards><edge name='left'><strip size='160'><card type='pages' /><card type='filters' /><card type='marks' /></strip></edge><edge name='top'><strip size='2147483647'><card type='columns' /></strip><strip size='2147483647'><card type='rows' /></strip></edge></cards>
+      <simple-id uuid='{00000003-0001-0000-0000-000000000015}' />
+    </window>
+    <window class='worksheet' name='Paid_CPC_vs_CPM'>
+      <cards><edge name='left'><strip size='160'><card type='pages' /><card type='filters' /><card type='marks' /></strip></edge><edge name='top'><strip size='2147483647'><card type='columns' /></strip><strip size='2147483647'><card type='rows' /></strip></edge></cards>
+      <simple-id uuid='{00000003-0001-0000-0000-000000000016}' />
+    </window>
+
+    <!-- Dashboard Windows -->
+    <window class='dashboard' maximized='true' name='1. Executive Overview'>
+      <viewpoints>
+        <viewpoint name='Exec_KPI_Revenue'><zoom type='entire-view' /></viewpoint>
+        <viewpoint name='Exec_KPI_Customers'><zoom type='entire-view' /></viewpoint>
+        <viewpoint name='Exec_KPI_Orders'><zoom type='entire-view' /></viewpoint>
+        <viewpoint name='Exec_KPI_AOV'><zoom type='entire-view' /></viewpoint>
+        <viewpoint name='Exec_Segment_Distribution'><zoom type='entire-view' /></viewpoint>
+        <viewpoint name='Exec_Revenue_by_Segment'><zoom type='entire-view' /></viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{00000004-0001-0000-0000-000000000001}' />
+    </window>
+
+    <window class='dashboard' name='2. Customer Intelligence'>
+      <viewpoints>
+        <viewpoint name='Cust_RFM_Scatter'><zoom type='entire-view' /></viewpoint>
+        <viewpoint name='Cust_Segment_Distribution'><zoom type='entire-view' /></viewpoint>
+        <viewpoint name='Cust_Revenue_by_Segment'><zoom type='entire-view' /></viewpoint>
+        <viewpoint name='Cust_Frequency_Analysis'><zoom type='entire-view' /></viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{00000004-0001-0000-0000-000000000002}' />
+    </window>
+
+    <window class='dashboard' name='3. Marketing Attribution'>
+      <viewpoints>
+        <viewpoint name='Attr_First_Touch_Rev'><zoom type='entire-view' /></viewpoint>
+        <viewpoint name='Attr_Last_Touch_Rev'><zoom type='entire-view' /></viewpoint>
+        <viewpoint name='Attr_Time_Decay_Rev'><zoom type='entire-view' /></viewpoint>
+        <viewpoint name='Attr_Touchpoint_Depth'><zoom type='entire-view' /></viewpoint>
+        <viewpoint name='Paid_Campaign_Spend'><zoom type='entire-view' /></viewpoint>
+        <viewpoint name='Paid_CPC_vs_CPM'><zoom type='entire-view' /></viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{00000004-0001-0000-0000-000000000003}' />
+    </window>
+  </windows>
+</workbook>
+"""
+    return xml.replace('__DIR_NORM__', DIR_NORM).strip()
+
+if __name__ == '__main__':
+    content = generate_tableau_workbook_xml()
+    # Test well-formed XML
+    ET.fromstring(content)
+    print("XML is 100% well-formed and valid!")
+    with open(TARGET_TWB, 'w', encoding='utf-8') as f:
+        f.write(content)
+    print(f"Successfully generated: {TARGET_TWB}")

@@ -1,0 +1,53 @@
+version: 2
+
+models:
+  - name: fct_order_attribution
+    description: "Order-level multi-touch attribution model comparing First-Touch, Last-Touch, Linear, and Time-Decay credits."
+    tests:
+      - unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - order_id
+              - touchpoint_rank
+
+    columns:
+      - name: order_id
+        description: "Primary key / reference to order."
+        tests:
+          - not_null
+
+      - name: customer_id
+        description: "Customer who placed the order."
+        tests:
+          - not_null
+
+      - name: touchpoint_rank
+        description: "Sequence rank of this touchpoint for the order."
+        tests:
+          - not_null
+
+      - name: total_touchpoints
+        description: "Total number of touchpoints preceding this order."
+        tests:
+          - not_null
+
+      - name: first_touch_credit
+        description: "Attribution credit under First-Touch model (1.0 for first touch, 0 otherwise)."
+        tests:
+          - not_null
+
+      - name: last_touch_credit
+        description: "Attribution credit under Last-Touch model (1.0 for last touch, 0 otherwise)."
+        tests:
+          - not_null
+
+      - name: linear_credit
+        description: "Attribution credit under Linear model (1 / total_touchpoints)."
+        tests:
+          - not_null
+
+      - name: time_decay_credit
+        description: "Attribution credit under 7-day half-life Time-Decay model."
+        tests:
+          - not_null
+
