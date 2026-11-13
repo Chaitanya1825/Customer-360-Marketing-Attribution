@@ -332,37 +332,65 @@ DATASET_ID = os.getenv("GCP_DATASET_ID", "analytics")
 
 @st.cache_resource
 def get_bigquery_client():
-    """Initializes BigQuery client using Google Cloud Application Default Credentials."""
+    """Initializes BigQuery client using Google Cloud ADC, st.secrets, or environment variables."""
     try:
+        if hasattr(st, "secrets") and "gcp_service_account" in st.secrets:
+            from google.oauth2 import service_account
+            credentials = service_account.Credentials.from_service_account_info(
+                dict(st.secrets["gcp_service_account"])
+            )
+            return bigquery.Client(credentials=credentials, project=credentials.project_id)
         return bigquery.Client(project=PROJECT_ID)
-    except Exception as e:
-        st.error(f"Failed to connect to Google Cloud BigQuery. Please verify credentials: {e}")
+    except Exception:
         return None
 
 @st.cache_data(ttl=600, show_spinner=False)
 def load_dbt_marts():
-    """Fetches dbt mart tables from BigQuery analytics dataset with strict type enforcement."""
+    """Fetches dbt mart tables from BigQuery analytics dataset with fallback to pre-computed verified marts."""
     client = get_bigquery_client()
-    if client is None:
-        return None, None, None, None
+    df_c360 = None
+    df_attr = None
+    df_perf = None
+    df_orders = None
+
+    if client is not None:
+        try:
+            # 1. Customer 360 Mart
+            c360_query = f"SELECT * FROM `{PROJECT_ID}.{DATASET_ID}.customer_360`"
+            df_c360 = client.query(c360_query).to_dataframe()
+
+            # 2. Order Attribution Mart
+            attr_query = f"SELECT * FROM `{PROJECT_ID}.{DATASET_ID}.fct_order_attribution`"
+            df_attr = client.query(attr_query).to_dataframe()
+
+            # 3. Campaign & Attribution Performance Mart
+            perf_query = f"SELECT * FROM `{PROJECT_ID}.{DATASET_ID}.fct_campaign_performance`"
+            df_perf = client.query(perf_query).to_dataframe()
+
+            # 4. Detailed Orders (for category drilldowns)
+            orders_query = f"SELECT order_id, customer_id, order_date, order_amount, product_category FROM `{PROJECT_ID}.{DATASET_ID}.stg_orders`"
+            df_orders = client.query(orders_query).to_dataframe()
+        except Exception:
+            client = None
+            df_c360 = None
+
+    # Fallback to local verified exports (e.g. for Streamlit Community Cloud deployment without GCP credentials)
+    if client is None or df_c360 is None:
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        c360_path = os.path.join(base_dir, "exports", "tableau", "customer_360.csv")
+        attr_path = os.path.join(base_dir, "exports", "tableau", "fct_order_attribution.csv")
+        perf_path = os.path.join(base_dir, "exports", "tableau", "fct_campaign_performance.csv")
+        orders_path = os.path.join(base_dir, "data", "raw", "orders.csv")
+
+        if os.path.exists(c360_path) and os.path.exists(attr_path) and os.path.exists(perf_path):
+            df_c360 = pd.read_csv(c360_path)
+            df_attr = pd.read_csv(attr_path)
+            df_perf = pd.read_csv(perf_path)
+            df_orders = pd.read_csv(orders_path)
+        else:
+            return None, None, None, None
 
     try:
-        # 1. Customer 360 Mart
-        c360_query = f"SELECT * FROM `{PROJECT_ID}.{DATASET_ID}.customer_360`"
-        df_c360 = client.query(c360_query).to_dataframe()
-
-        # 2. Order Attribution Mart
-        attr_query = f"SELECT * FROM `{PROJECT_ID}.{DATASET_ID}.fct_order_attribution`"
-        df_attr = client.query(attr_query).to_dataframe()
-
-        # 3. Campaign & Attribution Performance Mart
-        perf_query = f"SELECT * FROM `{PROJECT_ID}.{DATASET_ID}.fct_campaign_performance`"
-        df_perf = client.query(perf_query).to_dataframe()
-
-        # 4. Detailed Orders (for category drilldowns)
-        orders_query = f"SELECT order_id, customer_id, order_date, order_amount, product_category FROM `{PROJECT_ID}.{DATASET_ID}.stg_orders`"
-        df_orders = client.query(orders_query).to_dataframe()
-
         # Datatype conversions for Customer 360
         df_c360["total_orders"] = df_c360["total_orders"].astype(int)
         df_c360["total_sessions"] = df_c360["total_sessions"].astype(int)
@@ -404,11 +432,8 @@ def load_dbt_marts():
 
         return df_c360, df_attr, df_perf, df_orders
 
-    except GoogleAPIError as e:
-        st.error(f"BigQuery API Error loading dbt marts: {e}")
-        return None, None, None, None
     except Exception as e:
-        st.error(f"Unexpected error querying BigQuery: {e}")
+        st.error(f"Error processing marts data: {e}")
         return None, None, None, None
 
 
